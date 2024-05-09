@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortiment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="mainHeader">
+        <div class="logoContainer">
+            <img src="/img/logga.svg">
+        </div>
+        <div class="headerRight">
+            <nav>
+                <ul>
+                    <li class="objects headerLink desktop">Objects</li>
+                    <li class="projects headerLink desktop">Projects</li>
+                    <li class="about headerLink desktop">About</li>
+                    <li class="retailer headerLink desktop">Find Retailer</li>
+                    <li class="cart headerLink">Cart (0)</li>
+                    <span class="material-symbols-outlined mobile mobileMenu">
+                        menu
+                    </span>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="topSorter">
+        <section class="topText">
+        <h1>Objects</h1>
+        <p>Furniture by the Swedish designer Gustaf Westman, handmade by selected wood workers in Sweden. With bold shapes, curvy lines and color explosions these pieces will make a playful statement in your home adding something extra that awakens the senses.</p>
+        </section>
+        <div class="banner">
+            <img class="desktopImg" src="/img/productBanner3.png" alt="A blue room containing several of Gustav Westmans various furniture designs.">
+            <img class="mobileImg" src="/img/bannerMobile.png" alt="A blue room containing several of Gustav Westmans various furniture designs.">
+        </div>
+    </div>
+    <div class="gradientWrapper">
+        <div class="categoryContainer">
+            <div class="category all active"><div class="strikethrough"></div><p>All Objects</p></div>
+            <div class="category cupCategory"><div class="strikethrough"></div><p>Cups</p></div>
+            <div class="category plateCategory"><div class="strikethrough"></div><p>Plates</p></div>
+            <div class="category mirrorCategory"><div class="strikethrough"></div><p>Mirrors</p></div>
+            <div class="category smallObjectCategory"><div class="strikethrough"></div><p>Small Objects</p></div>
+            <div class="category lightingCategory"><div class="strikethrough"></div><p>Lighting</p></div>
+            <div class="category tableCategory"><div class="strikethrough"></div><p>Tables</p></div>
+            <div class="category sideboardCategory"><div class="strikethrough"></div><p>Sideboards</p></div>
+            <div class="category seatingCategory"><div class="strikethrough"></div><p>Seating</p></div>
+            <div class="category dividerCategory"><div class="strikethrough"></div><p>Room Dividers</p></div>
+        </div>
+    </div>
+    <div class="filteringToolsContainer">
+        <form class="searchBar" onsubmit="return false;">
+            <input type="text" id="search" name="search" placeholder="search">
+            <span class="material-symbols-outlined magnifying">
+                search
+                </span>
+        </form>
+        <div class="filterToolsTwo">
+            <div class="filterTool filter">
+                <p class="title">Filter</p>
+                <span class="material-symbols-outlined title">
+                    expand_more
+                    </span>
+                    <div class="filterBox">
+                        <div class="filterBoxHeader">
+                            <p>FILTER</p>
+                            <p>X</p>
+                        </div>
+                        <div class="filterBoxColors">
+                            <p class="boxSubheader">Colors</p>
+                            <div class="colorsContainer">
+                                <div class="color purple lightCheck"><span class="checked"></span></div>
+                                <div class="color lilac darkCheck"><span class="checked"></span></div>
+                                <div class="color red darkCheck"><span class="checked"></span></div>
+                                <div class="color pink darkCheck"><span class="checked"></span></div>
+                                <div class="color blue lightCheck"><span class="checked"></span></div>
+                                <div class="color lightBlue darkCheck"><span class="checked"></span></div>
+                                <div class="color green lightCheck"><span class="checked"></span></div>
+                                <div class="color lightGreen darkCheck"><span class="checked"></span></div>
+                                <div class="color yellow darkCheck"><span class="checked"></span></div>
+                                <div class="color white darkCheck"><span class="checked"></span></div>
+                                <div class="color black lightCheck"><span class="checked"></span></div>
+                                <div class="color brown lightCheck"><span class="checked"></span></div>
+                            </div>
+                        </div>
+                        <div class="filterBoxTypes">
+                            <p class="boxSubheader">Product Type</p>
+                            <div class="type cupType"><div class="strikethrough"></div><p>Cups</p></div>
+                            <div class="type plateType"><div class="strikethrough"></div><p>Plates</p></div>
+                            <div class="type mirrorType"><div class="strikethrough"></div><p>Mirrors</p></div>
+                            <div class="type lampType"><div class="strikethrough"></div><p>Lamps</p></div>
+                            <div class="type vaseType"><div class="strikethrough"></div><p>Vase</p></div>
+                            <div class="type candleType"><div class="strikethrough"></div><p>Candle holder</p></div>
+                            <div class="type flowerType"><div class="strikethrough"></div><p>Flower pot</p></div>
+                            <div class="type tableType"><div class="strikethrough"></div><p>Tables</p></div>
+                            <div class="type sockType"><div class="strikethrough"></div><p>Socks</p></div>
+                            <div class="type sofaType"><div class="strikethrough"></div><p>Sofa</p></div>
+                            <div class="type chairType"><div class="strikethrough"></div><p>Chair</p></div>
+                            <div class="type sideboardType"><div class="strikethrough"></div><p>Sideboards</p></div>
+                            <div class="type dividerType"><div class="strikethrough"></div><p>Room Dividers</p></div>
+                        </div>
+                    </div>
+            </div>
+            <div class="filterTool sort">
+                <p class="title">Sort By</p>
+                <span class="material-symbols-outlined title">
+                    expand_more
+                    </span>
+            </div>
+        </div>
+    </div>
+    <main class="container">
+        <article class="card cupCategory cupType pink">
+            <div class="cardImage">
+                <img src="../img/chunkyCup_pink.png">
+                <div class="hoverImage">
+                    <img src="../img/chunkyCup_hover.png">
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="cardText">
+                    <p class="name">Chunky Cup</p>
+                    <p class="color">Pink</p>
+                </div>
+                <p class="price">€65</p>
+            </div>
+        </article>
+        <article class="card mirrorCategory mirrorType blue">
+            <div class="cardImage">
+                <img src="../img/mirror_blue.png">
+                <div class="hoverImage">
+                    <img src="../img/blueMirror_hover.png">
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="cardText">
+                    <p class="name">Curvy Mirror Mini</p>
+                    <p class="color">Blue</p>
+                </div>
+                <p class="price">€1200</p>
+            </div>
+        </article>
+        <article class="card tableCategory tableType green">
+            <div class="cardImage">
+                <img src="../img/curvyTable_green.png">
+                <div class="hoverImage">
+                    <img src="../img/curvyTable_hover.png">
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="cardText">
+                    <p class="name">Curvy Table Mini</p>
+                    <p class="color">Green</p>
+                </div>
+                <p class="price">€750</p>
+            </div>
+        </article>
+        <article class="card mirrorCategory mirrorType lilac">
+            <div class="cardImage">
+                <img src="../img/mirror_violet.png">
+                <div class="hoverImage">
+                    <img src="../img/chunkyMirror_hover.png">
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="cardText">
+                    <p class="name">Chunky Mirror</p>
+                    <p class="color">Light Purple</p>
+                </div>
+                <p class="price">€3800</p>
+            </div>
+        </article>
+        <article class="card vaseCategory vaseType lightBlue">
+            <div class="cardImage">
+                <img src="../img/chunkyVase_lightBlue.png">
+                <div class="hoverImage">
+                    <img src="../img/chunkyVase_hover.png">
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="cardText">
+                    <p class="name">Chunky Vase</p>
+                    <p class="color">Light Blue</p>
+                </div>
+                <p class="price">€390</p>
+            </div>
+        </article>
+        <article class="card plateCategory plateType purple">
+            <div class="cardImage">
+                <img src="../img/chunkyPlate_purple.png">
+                <div class="hoverImage">
+                    <img src="../img/plate_hover.png">
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="cardText">
+                    <p class="name">Chunky Plate</p>
+                    <p class="color">Purple</p>
+                </div>
+                <p class="price">€55</p>
+            </div>
+        </article>
+        <article class="card lightingCategory candleType red">
+            <div class="cardImage">
+                <img src="../img/candleHolder_red.png">
+                <div class="hoverImage">
+                    <img src="../img/candleHolder_hover.png">
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="cardText">
+                    <p class="name">Chunky Candle Holder</p>
+                    <p class="color">Red</p>
+                </div>
+                <p class="price">€55</p>
+            </div>
+        </article>
+        <article class="card smallObjectCategory flowerType yellow">
+            <div class="cardImage">
+                <img src="../img/flowerPot_yellow.png">
+                <div class="hoverImage">
+                    <img src="../img/flowerPot_hover.png">
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="cardText">
+                    <p class="name">Chunky Flower Pot</p>
+                    <p class="color">Yellow</p>
+                </div>
+                <p class="price">€210</p>
+            </div>
+        </article>
+        <article class="card tableCategory tableType pink">
+            <div class="cardImage">
+                <img src="../img/wineTable_pink.png">
+                <div class="hoverImage">
+                    <img src="../img/wineTable_hover.png">
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="cardText">
+                    <p class="name">Wine Table</p>
+                    <p class="color">Pink</p>
+                </div>
+                <p class="price">€1800</p>
+            </div>
+        </article>
+        <article class="card seatingCategory chairType pink">
+            <div class="cardImage">
+                <img src="../img/chair_pink.png">
+                <div class="hoverImage">
+                    <img src="../img/chair_hover.png">
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="cardText">
+                    <p class="name">Pipe Chair</p>
+                    <p class="color">Pink</p>
+                </div>
+                <p class="price">€1100</p>
+            </div>
+        </article>
+        <article class="card tableCategory tableType lilac">
+            <div class="cardImage">
+                <img src="../img/table_violet.png">
+                <div class="hoverImage">
+                    <img src="../img/table_hover.png">
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="cardText">
+                    <p class="name">Round Table Mini</p>
+                    <p class="color">Light Purple</p>
+                </div>
+                <p class="price">€1200</p>
+            </div>
+        </article>
+        <article class="card seatingCategory sofaType blue">
+            <div class="cardImage">
+                <img src="../img/sofa_blue.png">
+                <div class="hoverImage">
+                    <img src="../img/sofa_hover.png">
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="cardText">
+                    <p class="name">Blob Sofa</p>
+                    <p class="color">Blue</p>
+                </div>
+                <p class="price">€2400</p>
+            </div>
+        </article>
+        </main>
+        <footer class="mainFooter">
+            <div class="footerLogo">
+                <img src="/img/logga.svg">
+            </div>
+            <div class="footerDesktop">
+                <div class="desktopCreate">
+                <p class="letsCreate">Let's create something beautiful together</p>
+                <p class="getInTouch">Get in touch</p>
+                </div>
+                    <div class="footerBottomLayer">
+                        <div class="one third">
+                            <p class="bottomTitles">Customer Service</p>
+                                <ul class="footerLinks">
+                                    <li>Find Retailers</li>
+                                    <li>returns, exchanges & complaints</li>
+                                    <li>Newsletter</li>
+                                    <li>Terms of Purchase</li>
+                                    <li>Privacy Policy</li>
+                                    <li>Cookies</li>
+                                </ul>
+                        </div>
+                        <div class="two third">
+                        <p class="bottomTitles">Menu</p>
+                            <ul class="footerLinks">
+                                <li>Objects</li>
+                                <li>About</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                        <div class="three third">
+                            <p class="bottomTitles">Follow</p>
+                                <ul class="footerLinks">
+                                    <li>Instagram</li>
+                                    <li>Facebook</li>
+                                    <li>TikTok</li>
+                                </ul>
+                        </div>
+                    </div>
+            </div>
+        </footer>
+    <script src="filter.js"></script>
+</body>
+</html>
+

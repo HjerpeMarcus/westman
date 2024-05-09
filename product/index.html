@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product View</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="mainHeader">
+        <div class="logoContainer">
+            <img src="/img/logga.svg">
+        </div>
+        <div class="headerRight">
+            <nav>
+                <ul>
+                    <li class="objects headerLink desktop">Objects</li>
+                    <li class="projects headerLink desktop">Projects</li>
+                    <li class="about headerLink desktop">About</li>
+                    <li class="retailer headerLink desktop">Find Retailer</li>
+                    <li class="cart headerLink">Cart (0)</li>
+                    <span class="material-symbols-outlined mobile mobileMenu">
+                        menu
+                    </span>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="mainContainer">
+    <main class="productView">
+        <div class="frame mobile">
+            <div class="fuling"></div>
+            <iframe class="splineFrame" src='https://my.spline.design/cuppink-ea11a7ed82db86f8809be791b0e064b9/' frameborder='0' width='100%' height='100%'></iframe>
+        </div>
+        <div class="frame desktop">
+            <div class="fuling"></div>
+            <iframe class="splineFrame" src='https://my.spline.design/cuppink-ea11a7ed82db86f8809be791b0e064b9/' frameborder='0' width='100%' height='100%'></iframe>
+        </div>
+        <div class="productInfo">
+            <h1>Chunky Cup</h1>
+            <h2>£65</h2>
+            <p class="description">Glazed ceramic chunky cup and saucer. Gustaf Westman logo embossed at base. Each cup is unique and natural color shiftings occur.</p>
+            <p class="subHeader chosenColor">Color: Pink</p>
+            <div class="colorContainer">
+                <div class="colorButton pink active"></div>
+                <div class="colorButton red"></div>
+                <div class="colorButton lightBlue"></div>
+                <div class="colorButton yellow"></div>
+                <div class="colorButton purple"></div>
+                <div class="colorButton brown"></div>
+            </div>
+            <p class="subHeader">Quantity:</p>
+            <div class="quantityContainer">
+                <span class="quantityButton quantityMinus">-</span>
+                <span class="quantityCounter">0</span>
+                <span class="quantityButton quantityPlus">+</span>
+            </div>
+            <a href="../checkout/index.html" class="cartButton">
+                <div class="invertField"></div>
+                <p>ADD TO CART</p>
+            </a>
+            <p class="descriptionButton">DESCRIPTION:</p>
+            <div class="descriptionContainer">
+                <div class="descRow">
+                    <p class="left">Dimensions</p>
+                    <p class="right">Ø 160 mm</p>
+                </div>
+                <div class="descRow">
+                    <p class="left">Care</p>
+                    <p class="right">Hand wash only</p>
+                </div>
+                <div class="descRow">
+                    <p class="left">Origin</p>
+                    <p class="right">Made in Portugal</p>
+                </div>
+                <div class="descRow">
+                    <p class="left">Shipping</p>
+                    <p class="right">Worldwide €15 4-14 days. Please note that for countries outside of the EU, Norway, Switzerland, UK, US, Canada, Japan & South Korea local customs charges may apply.</p>
+                </div>
+            </div>
+        </div>
+        <div class="productCarousel">
+            <div class="carouselImage">
+                <img src="/img/cupCarousel_one.png">
+            </div>
+            <div class="carouselImage">
+                <img src="/img/cupCarousel_two.png">
+            </div>
+            <div class="carouselImage">
+                <img src="/img/cupCarousel_three.png">
+            </div>
+            <div class="secondSet">
+                <div class="carouselImage">
+                    <img src="/img/cupCarousel_one.png">
+                </div>
+                <div class="carouselImage">
+                    <img src="/img/cupCarousel_two.png">
+                </div>
+                <div class="carouselImage">
+                    <img src="/img/cupCarousel_three.png">
+                </div>
+            </div>
+        </div>
+        <section class="videoSection">
+            <video autoplay loop muted>
+                <source src="/img/kaffe.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            <p class="productFluff">
+                Your New Favorite Mug! Crafted with care and designed for comfort, the Chunky Cup is more than just a mug—it's a statement piece for your morning routine. Made from durable ceramic and boasting a generous handle for easy gripping, this mug is perfect for sipping your favorite hot beverages in style. Its substantial size holds plenty of coffee, tea, or hot cocoa to keep you cozy on chilly mornings or during late-night study sessions.
+            </p>
+        </section>
+        <div class="lookingTop">
+            <p class="lookingAt">
+                People are also looking at
+            </p>
+            <div class="arrows">
+                <img class="lookingArrow arrowLeft" src="/img/Arrow_L.png">
+                <img class="lookingArrow arrowRight" src="/img/Arrow_L.png">
+            </div>
+        </div>
+        <div class="lookingContainer">
+            <article class="lookingCard one">
+                <div class="cardImage"></div>
+                <div class="cardFooter">
+                    <p class="cardName">Name</p>
+                    <p class="cardPrice">XX£</p>
+                </div>
+            </article>
+            <article class="lookingCard two">
+                <div class="cardImage"></div>
+                <div class="cardFooter">
+                    <p class="cardName">Name</p>
+                    <p class="cardPrice">XX£</p>
+                </div>
+            </article>
+            <article class="lookingCard one">
+                <div class="cardImage"></div>
+                <div class="cardFooter">
+                    <p class="cardName">Name</p>
+                    <p class="cardPrice">XX£</p>
+                </div>
+            </article>
+            <article class="lookingCard two">
+                <div class="cardImage"></div>
+                <div class="cardFooter">
+                    <p class="cardName">Name</p>
+                    <p class="cardPrice">XX£</p>
+                </div>
+            </article>
+            <article class="lookingCard one">
+                <div class="cardImage"></div>
+                <div class="cardFooter">
+                    <p class="cardName">Name</p>
+                    <p class="cardPrice">XX£</p>
+                </div>
+            </article>
+            <article class="lookingCard two">
+                <div class="cardImage"></div>
+                <div class="cardFooter">
+                    <p class="cardName">Name</p>
+                    <p class="cardPrice">XX£</p>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer class="mainFooter">
+        <div class="footerLogo">
+            <img src="/img/logga.svg">
+        </div>
+        <div class="footerDesktop">
+            <div class="desktopCreate">
+            <p class="letsCreate">Let's create something beautiful together</p>
+            <p class="getInTouch">Get in touch</p>
+            </div>
+                <div class="footerBottomLayer">
+                    <div class="one third">
+                        <p class="bottomTitles">Customer Service</p>
+                            <ul class="footerLinks">
+                                <li>Find Retailers</li>
+                                <li>returns, exchanges & complaints</li>
+                                <li>Newsletter</li>
+                                <li>Terms of Purchase</li>
+                                <li>Privacy Policy</li>
+                                <li>Cookies</li>
+                            </ul>
+                    </div>
+                    <div class="two third">
+                    <p class="bottomTitles">Menu</p>
+                        <ul class="footerLinks">
+                            <li>Objects</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="three third">
+                        <p class="bottomTitles">Follow</p>
+                            <ul class="footerLinks">
+                                <li>Instagram</li>
+                                <li>Facebook</li>
+                                <li>TikTok</li>
+                            </ul>
+                    </div>
+                </div>
+        </div>
+    </footer>
+    <script src="product.js"></script>
+</body>
+</html>
