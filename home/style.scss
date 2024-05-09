@@ -2,10 +2,6 @@
 @import "../partials/header";
 @import "../partials/footer";
     .mainHeader{
-        @media(min-width:830px){
-        padding: 0.75rem 3.25rem 0.75rem 3.25rem;
-        }
-        max-width:100%;
         color:white;
         img{
             filter:invert(100);
@@ -40,11 +36,16 @@
         }
         @media(min-width:600px){
             background-image: url("../img/homeHeroDesktop.png");
-            padding: 3.125rem 3.25rem 3.125rem 3.25rem;
-            flex-direction:row;
-            justify-content:space-between;
-            align-items:flex-end;
             margin-bottom:2.5rem;
+            padding:0;
+            .heroText{
+                margin: 3.125rem auto 3.125rem auto;
+                display:flex;
+                width:100%;
+                justify-content:space-between;
+                align-items:flex-end;
+                max-width:1200px;
+            }
             h2{
                 font-size:3rem;
                 margin-bottom:1rem;
@@ -103,10 +104,11 @@
             @media(min-width:600px){
                 margin:0;
                 .inspoText{
-                    padding: 0 3.75rem 0 3.75rem;
+                    margin: 0 auto 2.5rem auto;
                     display:flex;
                     justify-content:space-between;
-                    margin-bottom:2.5rem;
+                    width: 100%;
+                    max-width:1200px;
                     h2{
                         font-size:3.75rem;
                     }

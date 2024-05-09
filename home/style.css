@@ -218,13 +218,7 @@ body {
 }
 
 .mainHeader {
-  max-width: 100%;
   color: white;
-}
-@media (min-width: 830px) {
-  .mainHeader {
-    padding: 0.75rem 3.25rem 0.75rem 3.25rem;
-  }
 }
 .mainHeader img {
   filter: invert(100);
@@ -260,11 +254,16 @@ body {
 @media (min-width: 600px) {
   .homeContainer .hero {
     background-image: url("../img/homeHeroDesktop.png");
-    padding: 3.125rem 3.25rem 3.125rem 3.25rem;
-    flex-direction: row;
+    margin-bottom: 2.5rem;
+    padding: 0;
+  }
+  .homeContainer .hero .heroText {
+    margin: 3.125rem auto 3.125rem auto;
+    display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 2.5rem;
+    max-width: 1200px;
   }
   .homeContainer .hero h2 {
     font-size: 3rem;
@@ -330,10 +329,11 @@ body {
     margin: 0;
   }
   .homeContainer .getInspiration .inspoText {
-    padding: 0 3.75rem 0 3.75rem;
+    margin: 0 auto 2.5rem auto;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
   }
   .homeContainer .getInspiration .inspoText h2 {
     font-size: 3.75rem;
