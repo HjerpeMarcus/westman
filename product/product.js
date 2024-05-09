@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const lookingContainer = document.querySelector('.lookingContainer');
     const arrowLeft = document.querySelector('.arrowLeft');
     const arrowRight = document.querySelector('.arrowRight');
-
+    let qNumber = 0;
     let totalImages = images.length;
     let imageWidth = images[0].clientWidth;
     let marginRight = parseFloat(getComputedStyle(images[0]).marginRight);
