@@ -13,11 +13,11 @@ body {
   display: flex;
   padding: 0.75rem 1.33rem 0.75rem 1.33rem;
   justify-content: space-between;
-  width: 100%;
+  width: 97%;
   max-width: 1200px;
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 0.5rem;
+  right: 0.5rem;
   margin: 0 auto;
   color: black;
 }
@@ -292,7 +292,7 @@ body {
   }
 }
 .homeContainer .getInspiration {
-  margin: 0 0.75rem 0 0.75rem;
+  margin: 0 0.75rem 2.5rem 0.75rem;
 }
 .homeContainer .getInspiration h2 {
   margin-bottom: 1.125rem;
@@ -326,7 +326,7 @@ body {
 }
 @media (min-width: 600px) {
   .homeContainer .getInspiration {
-    margin: 0;
+    margin: 0 0 7rem 0;
   }
   .homeContainer .getInspiration .inspoText {
     margin: 0 auto 2.5rem auto;
@@ -337,10 +337,11 @@ body {
   }
   .homeContainer .getInspiration .inspoText h2 {
     font-size: 3.75rem;
+    margin: 0 1rem 0 1rem;
   }
   .homeContainer .getInspiration .inspoText p {
     flex: 0 0 30%;
-    margin: 0;
+    margin: 0 1rem 0 0;
   }
   .homeContainer .getInspiration .inspirationImages.mobile {
     display: none;
@@ -368,5 +369,54 @@ body {
   .homeContainer .getInspiration .inspirationImages.desktop .four {
     grid-column: 4/6;
     grid-row: 1/3;
+  }
+}
+.homeContainer .newsCarousels .newsCarousel {
+  display: flex;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+.homeContainer .newsCarousels .newsCarousel.carouselOne {
+  margin-bottom: 1.25rem;
+}
+.homeContainer .newsCarousels .newsCarousel.carouselTwo {
+  margin-bottom: 2.5rem;
+}
+.homeContainer .newsCarousels .newsCarousel .newsItem {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+.homeContainer .newsCarousels .newsCarousel .newsItem .newsImageContainer {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 0.75rem;
+}
+.homeContainer .newsCarousels .newsCarousel .newsItem .newsImageContainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.homeContainer .newsCarousels .newsCarousel .newsItem h3 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+}
+@media (min-width: 600px) {
+  .homeContainer .newsCarousels .newsCarousel .newsItem .newsImageContainer {
+    height: 5rem;
+    width: 5rem;
+    margin-right: 3rem;
+  }
+  .homeContainer .newsCarousels .newsCarousel .newsItem h3 {
+    font-size: 3rem;
+  }
+  .homeContainer .newsCarousels .newsCarousel.carouselOne {
+    margin-bottom: 2.625rem;
+  }
+  .homeContainer .newsCarousels .newsCarousel.carouselTwo {
+    margin-bottom: 6.8rem;
   }
 }/*# sourceMappingURL=style.css.map */
