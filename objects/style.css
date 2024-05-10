@@ -19,13 +19,13 @@ a:active {
 
 .mainHeader {
   display: flex;
-  padding: 0.75rem 1.33rem 0.75rem 1.33rem;
+  padding: 0.75rem 10px 0.75rem 10px;
   justify-content: space-between;
-  width: 97%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1220px;
   position: absolute;
-  left: 0.5rem;
-  right: 0.5rem;
+  left: 0;
+  right: 0;
   margin: 0 auto;
   color: black;
 }
@@ -112,8 +112,6 @@ a:active {
 @media (min-width: 600px) {
   .mainHeader {
     margin-bottom: 2.5rem;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 

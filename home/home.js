@@ -1,6 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
     const carouselOne = document.querySelector('.carouselOne');
     const carouselTwo = document.querySelector('.carouselTwo');
+    const lookingContainer = document.querySelector('.lookingContainer');
+    const arrowLeft = document.querySelector('.arrowLeft');
+    const arrowRight = document.querySelector('.arrowRight');
 
     function setupCarousel(carousel) {
         const originalContent = carousel.innerHTML;
@@ -48,4 +50,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initial start
     startScrolling();
-});
+arrowLeft.addEventListener('click', () => scrollLookingContainer('left'));
+arrowRight.addEventListener('click', () => scrollLookingContainer('right'));
+function scrollLookingContainer(direction) {
+    const cards = document.querySelectorAll('.lookingCard');
+    if (cards.length === 0) return;
+    const cardWidth = cards[0].offsetWidth;
+    const margin = parseFloat(getComputedStyle(cards[0]).marginRight);
+    const scrollAmount = cardWidth + margin;
+    if (direction === 'right') {
+        lookingContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    } else {
+        lookingContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
+};

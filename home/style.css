@@ -19,13 +19,13 @@ a:active {
 
 .mainHeader {
   display: flex;
-  padding: 0.75rem 1.33rem 0.75rem 1.33rem;
+  padding: 0.75rem 10px 0.75rem 10px;
   justify-content: space-between;
-  width: 97%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1220px;
   position: absolute;
-  left: 0.5rem;
-  right: 0.5rem;
+  left: 0;
+  right: 0;
   margin: 0 auto;
   color: black;
 }
@@ -112,8 +112,6 @@ a:active {
 @media (min-width: 600px) {
   .mainHeader {
     margin-bottom: 2.5rem;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -230,14 +228,14 @@ a:active {
   align-items: center;
   cursor: pointer;
 }
+.arrowBtn:hover .text {
+  margin-right: 2.5rem;
+}
 .arrowBtn .text {
   text-transform: uppercase;
   color: black;
   margin-right: 1.5rem;
   transition: margin-right ease 0.3s;
-}
-.arrowBtn .text:hover {
-  margin-right: 2.5rem;
 }
 .arrowBtn .arrowContainer {
   flex: 0 0 60px;
@@ -252,7 +250,7 @@ a:active {
   filter: invert(100);
 }
 
-.homeContainer .hero {
+.hero {
   height: 100vh;
   width: 100vw;
   max-width: 100%;
@@ -265,60 +263,67 @@ a:active {
   color: white;
   margin-bottom: 2.5rem;
 }
-.homeContainer .hero h2 {
+.hero h2 {
   font-size: 2.2rem;
   font-weight: 500;
 }
-.homeContainer .hero .sameDesign {
+.hero .sameDesign {
   font-size: 1.25rem;
   margin-bottom: 5rem;
 }
-.homeContainer .hero .seeMore {
+.hero .seeMore {
   display: flex;
+  cursor: pointer;
 }
-.homeContainer .hero .seeMore p {
+.hero .seeMore p {
   margin-right: 2.25rem;
 }
 @media (min-width: 600px) {
-  .homeContainer .hero {
+  .hero {
     background-image: url("../img/homeHeroDesktop.png");
     margin-bottom: 2.5rem;
     padding: 0;
   }
-  .homeContainer .hero .heroText {
+  .hero .heroText {
     margin: 3.125rem auto 3.125rem auto;
-    padding: 0 10px 0 10px;
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: flex-end;
     max-width: 1220px;
+    padding: 0 10px 0 10px;
   }
-  .homeContainer .hero h2 {
+  .hero h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
   }
 }
 @media (min-width: 600px) and (min-width: 800px) {
-  .homeContainer .hero h2 {
+  .hero h2 {
     font-size: 5rem;
   }
 }
 @media (min-width: 600px) {
-  .homeContainer .hero .sameDesign {
+  .hero .sameDesign {
     margin: 0;
   }
-  .homeContainer .hero .seeMore {
+  .hero .seeMore {
     flex: 0 0 30%;
     display: flex;
     justify-content: flex-end;
   }
-  .homeContainer .hero .seeMore p {
+  .hero .seeMore p {
     margin: 0 2.25rem 0 0;
   }
-  .homeContainer .hero .seeMore img {
+  .hero .seeMore img {
     width: 3.5rem;
   }
+}
+
+.homeContainer section {
+  max-width: 1220px;
+  padding: 0 10px 0 10px;
+  margin: auto;
 }
 .homeContainer .getInspiration {
   margin: 0 0.75rem 2.5rem 0.75rem;
@@ -356,15 +361,15 @@ a:active {
 }
 @media (min-width: 600px) {
   .homeContainer .getInspiration {
-    margin: 0 0 7rem 0;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
   }
   .homeContainer .getInspiration .inspoText {
-    margin: 0 auto 2.5rem auto;
-    padding: 0 10px 0 10px;
+    margin: 0 0 2.5rem 0;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1220px;
   }
   .homeContainer .getInspiration .inspoText h2 {
     font-size: 3.75rem;
@@ -372,6 +377,15 @@ a:active {
   .homeContainer .getInspiration .inspoText p {
     flex: 0 0 30%;
   }
+}
+@media (min-width: 600px) and (min-width: 600px) {
+  .homeContainer .getInspiration .inspoText {
+    max-width: 1220px;
+    padding: 0 10px 0 10px;
+    margin: 0 auto 2.5rem auto;
+  }
+}
+@media (min-width: 600px) {
   .homeContainer .getInspiration .inspirationImages.mobile {
     display: none;
   }
@@ -381,7 +395,7 @@ a:active {
     width: 100%;
     grid-template-columns: 19% 19% 20% 19% 19%;
     grid-template-rows: auto auto;
-    margin: auto;
+    margin: 0 auto 6.875rem auto;
   }
   .homeContainer .getInspiration .inspirationImages.desktop .one {
     grid-column: 1;
@@ -400,10 +414,15 @@ a:active {
     grid-row: 1/3;
   }
 }
+.homeContainer .newsCarousels {
+  max-width: 100%;
+  padding: 0;
+}
 .homeContainer .newsCarousels .newsCarousel {
   display: flex;
   position: relative;
-  max-width: 100%;
+  width: auto;
+  max-width: none;
   overflow: hidden;
 }
 .homeContainer .newsCarousels .newsCarousel.carouselOne {
@@ -541,9 +560,12 @@ a:active {
   margin-bottom: 1rem;
 }
 .homeContainer .meetWestman {
-  max-width: 1220px;
-  padding: 0 10px 0 10px;
-  margin: 0 auto 0 auto;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 600px) {
+  .homeContainer .meetWestman {
+    margin: 0 auto 7.5rem auto;
+  }
 }
 .homeContainer .meetWestman .meetImageContainer {
   margin-left: auto;
@@ -594,7 +616,7 @@ a:active {
     position: relative;
   }
   .homeContainer .meetWestman .meetSectionTwo .meetText {
-    width: 35%;
+    width: 50%;
     margin-left: auto;
   }
   .homeContainer .meetWestman .meetSectionTwo .meetText h3 {
@@ -607,4 +629,134 @@ a:active {
     left: 0;
     bottom: 0;
   }
+}
+.homeContainer .popularProducts .lookingTop {
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.homeContainer .popularProducts .lookingTop .arrows {
+  display: none;
+  cursor: pointer;
+}
+@media (min-width: 600px) {
+  .homeContainer .popularProducts .lookingTop .arrows {
+    display: flex;
+    padding-bottom: 0.5rem;
+  }
+  .homeContainer .popularProducts .lookingTop .arrows .lookingArrow.arrowLeft {
+    margin-right: 0.5rem;
+  }
+  .homeContainer .popularProducts .lookingTop .arrows .lookingArrow.arrowRight {
+    transform: rotate(180deg);
+  }
+}
+.homeContainer .popularProducts .lookingTop .lookingAt {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex: 0 0 100%;
+  font-weight: 600;
+}
+@media (min-width: 600px) {
+  .homeContainer .popularProducts .lookingTop .lookingAt {
+    flex: 0 0 55%;
+  }
+}
+.homeContainer .popularProducts .lookingContainer {
+  display: flex;
+  white-space: nowrap;
+  overflow: scroll;
+  margin: 0 -10px 3rem 0;
+  padding-right: 10px;
+}
+@media (min-width: 600px) {
+  .homeContainer .popularProducts .lookingContainer {
+    flex: 0 0 100%;
+    overflow-x: hidden;
+  }
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard {
+  flex: 0 0 70%;
+  margin-right: 0.75rem;
+}
+@media (min-width: 600px) {
+  .homeContainer .popularProducts .lookingContainer .lookingCard {
+    flex: 0 0 330px;
+  }
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard .cardImage {
+  background-color: gray;
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard.one .cardImage {
+  height: 400px;
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard.two .cardImage {
+  height: 350px;
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard .cardFooter {
+  padding-top: 16px;
+  background-color: white;
+  font-weight: 600;
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard .cardFooter .cardName {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.homeContainer .chunkyVideo {
+  max-width: none;
+  padding: 0;
+  position: relative;
+  height: 110vh;
+}
+.homeContainer .chunkyVideo .videoText {
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  color: white;
+  max-width: 280px;
+  margin-bottom: 4rem;
+}
+.homeContainer .chunkyVideo .videoText h3 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+.homeContainer .chunkyVideo .videoText .videoDesc {
+  margin-bottom: 1.5rem;
+}
+.homeContainer .chunkyVideo .videoText .arrowBtn .text {
+  color: white;
+}
+@media (min-width: 600px) {
+  .homeContainer .chunkyVideo .videoText {
+    bottom: 35vh;
+    width: 100vw;
+    max-width: 100%;
+    margin: auto;
+  }
+  .homeContainer .chunkyVideo .videoText .textContainer {
+    max-width: 1220px;
+    padding: 0 10px 0 10px;
+    margin: auto;
+  }
+  .homeContainer .chunkyVideo .videoText .textContainer h3 {
+    font-size: 5rem;
+    max-width: 565px;
+  }
+  .homeContainer .chunkyVideo .videoText .textContainer .videoDesc {
+    max-width: 565px;
+  }
+}
+.homeContainer .chunkyVideo video {
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  -o-object-position: 55% 50%;
+     object-position: 55% 50%;
+  filter: brightness(90%);
 }/*# sourceMappingURL=style.css.map */
