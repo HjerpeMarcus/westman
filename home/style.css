@@ -175,7 +175,7 @@ a:active {
 }
 @media (min-width: 600px) {
   .mainFooter {
-    max-width: 1200px;
+    max-width: 1220px;
     margin: auto;
     margin-top: 6.875rem;
   }
@@ -686,7 +686,33 @@ a:active {
   }
 }
 .homeContainer .popularProducts .lookingContainer .lookingCard .cardImage {
-  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard .cardImage.pink {
+  background-color: #FFE4E0;
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard .cardImage.blue {
+  background-color: #C5D9F6;
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard .cardImage.yellow {
+  background-color: #FFF5DC;
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard .cardImage.green {
+  background-color: #E5FCE3;
+  padding-bottom: 20%;
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard .cardImage.red {
+  background-color: #FBADA4;
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard .cardImage .imageContainer {
+  width: 70%;
+}
+.homeContainer .popularProducts .lookingContainer .lookingCard .cardImage .imageContainer img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .homeContainer .popularProducts .lookingContainer .lookingCard.one .cardImage {
   height: 400px;
@@ -708,6 +734,12 @@ a:active {
   padding: 0;
   position: relative;
   height: 110vh;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 600px) {
+  .homeContainer .chunkyVideo {
+    margin-bottom: 6rem;
+  }
 }
 .homeContainer .chunkyVideo .videoText {
   position: absolute;
@@ -758,5 +790,200 @@ a:active {
   width: 100%;
   -o-object-position: 55% 50%;
      object-position: 55% 50%;
-  filter: brightness(90%);
+}
+.homeContainer .vinGarden {
+  max-width: none;
+  padding: 0;
+}
+@media (min-width: 600px) {
+  .homeContainer .vinGarden {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 1220px;
+    padding: 0 10px 0 10px;
+  }
+}
+.homeContainer .vinGarden .wineText {
+  margin-bottom: 1.5rem;
+  padding: 0 10px 0 10px;
+}
+.homeContainer .vinGarden .wineText h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.homeContainer .vinGarden .wineText .wineDesc {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 600px) {
+  .homeContainer .vinGarden .wineText {
+    margin: 0;
+    padding: 0;
+    flex: 0 0 35%;
+  }
+  .homeContainer .vinGarden .wineText h2 {
+    font-size: 3.75rem;
+  }
+}
+.homeContainer .vinGarden .wineImageContainer {
+  margin-right: auto;
+  width: 69%;
+  position: relative;
+  margin-bottom: 33%;
+}
+.homeContainer .vinGarden .wineImageContainer .innerImageContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: -40%;
+  top: 40%;
+  margin-right: 10px;
+}
+@media (min-width: 600px) {
+  .homeContainer .vinGarden .wineImageContainer {
+    flex: 0 0 32%;
+    margin-right: 0;
+    margin-bottom: 12rem;
+  }
+}
+.homeContainer .vinGarden .wineImageContainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.homeContainer .diveMirrors {
+  padding: 0;
+  margin: 0 auto 2.5rem auto;
+}
+.homeContainer .diveMirrors .mirrorText {
+  margin: 0 10px 1.5rem 10px;
+}
+.homeContainer .diveMirrors .mirrorText h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.homeContainer .diveMirrors .mirrorImageContainer {
+  width: 100%;
+  padding-left: 10px;
+}
+.homeContainer .diveMirrors .mirrorImageContainer img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 600px) {
+  .homeContainer .diveMirrors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1220px;
+    padding: 0 10px 0 10px;
+  }
+  .homeContainer .diveMirrors .mirrorText {
+    margin: 0;
+    flex: 0 0 27%;
+  }
+  .homeContainer .diveMirrors .mirrorText h2 {
+    font-size: 3.5rem;
+  }
+  .homeContainer .diveMirrors .mirrorImageContainer {
+    flex: 0 0 60%;
+  }
+}
+.homeContainer .latestNews {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.homeContainer .latestNews .newsImageContainer, .homeContainer .latestNews .newsTextContainer {
+  transition: transform 0.5s ease-in-out;
+}
+.homeContainer .latestNews .newsCounter.mobile {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+.homeContainer .latestNews .newsCounter.desktop {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.homeContainer .latestNews h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.homeContainer .latestNews .newsImageContainer {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 1.875rem;
+}
+.homeContainer .latestNews .newsImageContainer .newsImage {
+  flex: 0 0 100%;
+  margin-right: 20px;
+}
+.homeContainer .latestNews .newsImageContainer .newsImage img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homeContainer .latestNews .newsTextContainer {
+  margin-bottom: 6.25rem;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.homeContainer .latestNews .newsTextContainer .newsText {
+  flex: 0 0 100%;
+  margin-right: 20px;
+}
+.homeContainer .latestNews .newsTextContainer .newsText h3 {
+  font-size: 1.375rem;
+  margin-bottom: 1.875rem;
+}
+.homeContainer .latestNews .newsArrowContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.homeContainer .latestNews .newsArrowContainer .newsArrow {
+  flex: 0 0 33%;
+  cursor: pointer;
+}
+.homeContainer .latestNews .newsArrowContainer .newsArrow img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 600px) {
+  .homeContainer .latestNews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .homeContainer .latestNews h2 {
+    font-size: 3.75rem;
+    flex: 0 0 100%;
+  }
+  .homeContainer .latestNews .newsImageContainer {
+    flex: 0 0 50%;
+  }
+  .homeContainer .latestNews .newsTextContainer {
+    flex: 0 0 40%;
+    max-width: 400px;
+  }
+  .homeContainer .latestNews .newsTextContainer .newsText h3 {
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
+  }
+  .homeContainer .latestNews .newsArrowContainer {
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    right: 0;
+    padding-right: 10px;
+  }
+  .homeContainer .latestNews .newsArrowContainer .newsArrow {
+    flex: 0 0 46%;
+  }
 }/*# sourceMappingURL=style.css.map */

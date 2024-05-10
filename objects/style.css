@@ -175,7 +175,7 @@ a:active {
 }
 @media (min-width: 600px) {
   .mainFooter {
-    max-width: 1200px;
+    max-width: 1220px;
     margin: auto;
     margin-top: 6.875rem;
   }

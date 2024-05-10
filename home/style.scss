@@ -429,7 +429,32 @@
                         flex: 0 0 330px;
                     }
                     .cardImage{
-                        background-color:gray;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+                        &.pink{
+                            background-color:#FFE4E0;
+                        }
+                        &.blue{
+                            background-color:#C5D9F6
+                        }
+                        &.yellow{
+                            background-color:#FFF5DC
+                        }
+                        &.green{
+                            background-color:#E5FCE3;
+                            padding-bottom:20%;
+                        }
+                        &.red{
+                            background-color:#FBADA4;
+                        }
+                        .imageContainer{
+                            width:70%;
+                            img{
+                                width:100%;
+                                object-fit:cover;
+                            }
+                        }
                     }
                     &.one{
                         .cardImage{
@@ -458,6 +483,10 @@
             padding:0;
             position:relative;
             height:110vh;
+            margin-bottom:2.5rem;
+            @media(min-width:600px){
+                margin-bottom:6rem;
+            }
             .videoText{
                 position:absolute;
                 bottom:0;
@@ -505,7 +534,192 @@
                 object-fit: cover;
                 width:100%;
                 object-position:55% 50%;
-                filter: brightness(90%);
+            }
+        }
+        .vinGarden{
+            max-width:none;
+            padding:0;
+            @media(min-width:600px){
+                display:flex;
+                flex-direction:row-reverse;
+                justify-content:space-between;
+                max-width:1220px;
+                padding:0 10px 0 10px;
+            }
+            .wineText{
+                margin-bottom:1.5rem;
+                padding: 0 10px 0 10px;
+                h2{
+                    font-size:1.5rem;
+                    margin-bottom:1.5rem;
+                }
+                .wineDesc{
+                    margin-bottom:1.5rem;
+                }
+                @media(min-width:600px){
+                    margin:0;
+                    padding:0;
+                    flex: 0 0 35%;
+                    h2{
+                        font-size:3.75rem;
+                    }
+                }
+            }
+            .wineImageContainer{
+                margin-right:auto;
+                width:69%;
+                position:relative;
+                margin-bottom:33%;
+                .innerImageContainer{
+                    width:100%;
+                    height:100%;
+                    position:absolute;
+                    right:-40%;
+                    top: 40%;
+                    margin-right:10px;
+                }
+                @media(min-width:600px){
+                    flex: 0 0 32%;
+                    margin-right:0;
+                    margin-bottom:12rem;
+                }
+                img{
+                    object-fit:cover;
+                    width:100%;
+                    height:100%;
+                }
+            }
+        }
+        .diveMirrors{
+            padding:0;
+            margin: 0 auto 2.5rem auto;
+            .mirrorText{
+                margin: 0 10px 1.5rem 10px;
+                h2{
+                    font-size:1.5rem;
+                    margin-bottom:1.5rem;
+                }
+            }
+            .mirrorImageContainer{
+                width:100%;
+                padding-left:10px;
+                img{
+                    width:100%;
+                    object-fit:cover;
+                }
+            }
+            @media(min-width:600px){
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                max-width:1220px;
+                padding: 0 10px 0 10px;
+                .mirrorText{
+                    margin:0;
+                    flex: 0 0 27%;
+                    h2{
+                        font-size:3.5rem;
+                    }
+                }
+                .mirrorImageContainer{
+                    flex: 0 0 60%;
+                }
+            }
+        }
+        .latestNews{
+            position:relative;
+            margin-bottom:2.5rem;
+            .newsImageContainer, .newsTextContainer {
+                transition: transform 0.5s ease-in-out;
+            }            
+            .newsCounter{
+                &.mobile{
+                    position:absolute;
+                    top:6px;
+                    right:10px;
+                }
+                &.desktop{
+                    position:absolute;
+                    top:0;
+                    right:0;
+                }
+            }
+            h2{
+                font-size:1.5rem;
+                margin-bottom: 2.5rem;
+            }
+            .newsImageContainer{
+                display:flex;
+                overflow:hidden;
+                width:100%;
+                margin-bottom:1.875rem;
+                .newsImage{
+                    flex: 0 0 100%;
+                    margin-right:20px;
+                    img{
+                        width:100%;
+                        object-fit:cover;
+                    }
+                }
+            }
+            .newsTextContainer{
+                margin-bottom:6.25rem;
+                display:flex;
+                overflow:hidden;
+                position:relative;
+                .newsText{
+                    flex:0 0 100%;
+                    margin-right:20px;
+                    h3{
+                        font-size:1.375rem;
+                        margin-bottom:1.875rem;
+                    }
+                }
+            }
+            .newsArrowContainer{
+                width:100%;
+                display:flex;
+                justify-content:space-between;
+                .newsArrow{
+                    flex: 0 0 33%;
+                    cursor:pointer;
+                    img{
+                        width:100%;
+                        object-fit:cover;
+                    }
+                }
+            }
+            @media(min-width:600px){
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:space-between;
+                h2{
+                    font-size:3.75rem;
+                    flex:0 0 100%;
+                }
+                .newsImageContainer{
+                    flex:0 0 50%;
+                }
+                .newsTextContainer{
+                    flex:0 0 40%;
+                    max-width:400px;
+                    .newsText{
+                        h3{
+                            font-size:2.25rem;
+                            margin-bottom:2.5rem;
+                        }
+                    }
+                }
+                .newsArrowContainer{
+                    position:absolute;
+                    width:200px;
+                    bottom:0;
+                    right:0;
+                    padding-right:10px;
+                    .newsArrow{
+                        flex: 0 0 46%;
+                    }
+                }
             }
         }
     }
