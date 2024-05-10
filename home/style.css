@@ -9,6 +9,14 @@ body {
   height: 100%;
 }
 
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
 .mainHeader {
   display: flex;
   padding: 0.75rem 1.33rem 0.75rem 1.33rem;
@@ -217,6 +225,29 @@ body {
   }
 }
 
+.arrowBtn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.arrowBtn .text {
+  text-transform: uppercase;
+  color: black;
+  margin-right: 1.5rem;
+  transition: margin-right ease 0.3s;
+}
+.arrowBtn .text:hover {
+  margin-right: 2.5rem;
+}
+.arrowBtn .arrowContainer {
+  flex: 0 0 60px;
+}
+.arrowBtn .arrowContainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
 .mainHeader {
   filter: invert(100);
 }
@@ -419,10 +450,10 @@ body {
   }
 }
 .homeContainer .specialProjects {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 .homeContainer .specialProjects h2 {
-  margin: 0 10px 1.5rem 10px;
+  margin: 0 10px 2.5rem 10px;
   font-size: 1.5rem;
 }
 .homeContainer .specialProjects .specProjImages {
@@ -509,22 +540,71 @@ body {
 .homeContainer .specialProjects .specProjectsText .paragraph {
   margin-bottom: 1rem;
 }
-.homeContainer .specialProjects .specProjectsText .contactBtn {
-  display: flex;
-  width: 40%;
-  max-width: 150px;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
+.homeContainer .meetWestman {
+  max-width: 1220px;
+  padding: 0 10px 0 10px;
+  margin: 0 auto 0 auto;
 }
-.homeContainer .specialProjects .specProjectsText .contactBtn .contact {
-  text-transform: uppercase;
+.homeContainer .meetWestman .meetImageContainer {
+  margin-left: auto;
+  margin-right: -10px;
+  width: 69%;
+  position: relative;
+  margin-bottom: 2.5rem;
 }
-.homeContainer .specialProjects .specProjectsText .contactBtn .arrowContainer {
-  flex: 0 0 40%;
+.homeContainer .meetWestman .meetImageContainer .innerImageContainer {
+  width: 65%;
+  position: absolute;
+  left: -48%;
+  top: 18%;
 }
-.homeContainer .specialProjects .specProjectsText .contactBtn .arrowContainer img {
+.homeContainer .meetWestman .meetImageContainer img {
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
   width: 100%;
+}
+.homeContainer .meetWestman .meetSectionTwo h3 {
+  margin-bottom: 1.5rem;
+}
+.homeContainer .meetWestman .meetSectionTwo .meetDesc {
+  margin-bottom: 1.5rem;
+}
+.homeContainer .meetWestman .meetSectionTwo .meetTwoImg {
+  width: 100%;
+  margin-top: 2.5rem;
+}
+.homeContainer .meetWestman .meetSectionTwo .meetTwoImg img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 600px) {
+  .homeContainer .meetWestman .meetImageContainer {
+    margin-right: 0;
+    max-width: 560px;
+  }
+  .homeContainer .meetWestman .meetImageContainer .innerImageContainer {
+    left: -45%;
+  }
+  .homeContainer .meetWestman .meetSectionTwo {
+    position: relative;
+    width: 100%;
+    position: relative;
+  }
+  .homeContainer .meetWestman .meetSectionTwo .meetText {
+    width: 35%;
+    margin-left: auto;
+  }
+  .homeContainer .meetWestman .meetSectionTwo .meetText h3 {
+    font-size: 3.75rem;
+    font-weight: 500;
+  }
+  .homeContainer .meetWestman .meetSectionTwo .meetTwoImg {
+    width: 35%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

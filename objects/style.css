@@ -9,6 +9,14 @@ body {
   height: 100%;
 }
 
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
 .mainHeader {
   display: flex;
   padding: 0.75rem 1.33rem 0.75rem 1.33rem;

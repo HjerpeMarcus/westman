@@ -1,0 +1,21 @@
+.arrowBtn{
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    .text{
+        text-transform:uppercase;
+        color:black;
+        margin-right:1.5rem;
+        transition: margin-right ease 0.3s;
+        &:hover{
+            margin-right:2.5rem;
+        }
+    }
+    .arrowContainer{
+        flex: 0 0 60px;
+        img{
+            object-fit:cover;
+            width:100%;
+        }
+    }
+}

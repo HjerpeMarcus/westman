@@ -1,6 +1,7 @@
 @import "../partials/base";
 @import "../partials/header";
 @import "../partials/footer";
+@import "../partials/components/arrowBtn";
     .mainHeader{
         filter:invert(100);
 
@@ -203,9 +204,9 @@
             }
         }
         .specialProjects{
-            margin-bottom:1.5rem;
+            margin-bottom:2.5rem;
             h2{
-                margin: 0 10px 1.5rem 10px;
+                margin: 0 10px 2.5rem 10px;
                 font-size:1.5rem;
             }
             .specProjImages{
@@ -294,22 +295,72 @@
                 .paragraph{
                     margin-bottom:1rem;
                 }
-                .contactBtn{
-                    display:flex;
-                    width:40%;
-                    max-width:150px;
-                    justify-content:space-between;
-                    align-items:center;
-                    cursor:pointer;
-                    .contact{
-                        text-transform:uppercase;
+            }
+        }
+        .meetWestman{
+            max-width:1220px;
+            padding: 0 10px 0 10px;
+            margin: 0 auto 0 auto;
+            .meetImageContainer{
+                margin-left:auto;
+                margin-right: -10px;
+                width:69%;
+                position:relative;
+                margin-bottom:2.5rem;
+                .innerImageContainer{
+                    width:65%;
+                    position:absolute;
+                    left:-48%;
+                    top:18%;
+                }
+                img{
+                    object-fit:cover;
+                    height:100%;
+                    width:100%;
+                }
+            }
+            .meetSectionTwo{
+                h3{
+                    margin-bottom:1.5rem;
+                }
+                .meetDesc{
+                    margin-bottom:1.5rem;
+                }
+                .meetTwoImg{
+                    width:100%;
+                    margin-top:2.5rem;
+                    img{
+                        height:100%;
+                        width:100%;
+                        object-fit:cover;
                     }
-                    .arrowContainer{
-                        flex: 0 0 40%;
-                        img{
-                            object-fit:cover;
-                            width:100%;
+                }
+            }
+            @media(min-width:600px){
+                .meetImageContainer{
+                    margin-right:0;
+                    max-width:560px;
+                    .innerImageContainer{
+                        left:-45%;
+                    }
+                }
+                .meetSectionTwo{
+                    position:relative;
+                    width:100%;
+                    position:relative;
+                    .meetText{
+                        width:35%;
+                        margin-left:auto;
+                        h3{
+                            font-size:3.75rem;
+                            font-weight:500;
                         }
+                    }
+                    .meetTwoImg{
+                        width:35%;
+                        position:absolute;
+                        left:0;
+                        bottom:0;
                     }
                 }
             }
