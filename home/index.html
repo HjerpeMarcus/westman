@@ -11,18 +11,67 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="mainHeader">
-        <div class="logoContainer">
-            <img src="../img/logga.svg">
+    <div class="cartPopout">
+        <div class="closeRow">
+            <span class="material-symbols-outlined closeBtn">
+                close
+                </span>
         </div>
+        <p class="cartHeader">
+            Cart (1)
+        </p>
+            <div class="itemRow">
+                <div class="imgContainer">
+                    <img src="../img/chunkyCup_pink.png">
+                </div>
+                <div class="itemText">
+                    <span class="boldText name">Chunky Cup</span>
+                    <span class="boldText price">€65</span>
+                    <span class="color">Pink</span>
+                    <div class="bottomRow">
+                        <div class="cartQuantity">
+                            <span class="cartQuantBtn material-symbols-outlined">
+                                remove
+                                </span>
+                            <span class="number">1</span>
+                            <span class="cartQuantBtn material-symbols-outlined">
+                                add
+                                </span>
+                        </div>
+                    <div class="cartRemove"><span>REMOVE</span></div>
+                    </div>
+                </div>
+            </div>
+        <div class="cartFooter">
+            <div class="footerRow subtotal">
+                <span class="footerTitle">Subtotal</span>
+                <span class="footerPrice">€65</span>
+            </div>
+            <div class="footerRow shipping">
+                <span class="footerTitle">Shipping</span><span class="shippingAddress">(Värmlands län, Sweden)</span>
+                <span class="footerPrice">€15</span>
+            </div>
+            <div class="footerRow total">
+                <span class="footerTitle">Total</span>
+                <span class="footerPrice">€80</span>
+            </div>
+            <a class="cartButton" href="../checkout/index.html">To Checkout
+                <div class="invertField"></div>
+            </a>
+        </div>
+    </div>
+    <header class="mainHeader">
+        <a href="../home/index.html" class="logoContainer">
+            <img src="../img/logga.svg">
+        </a>
         <div class="headerRight">
             <nav>
                 <ul>
-                    <li class="objects headerLink desktop">Objects</li>
-                    <li class="projects headerLink desktop">Projects</li>
-                    <li class="about headerLink desktop">About</li>
-                    <li class="retailer headerLink desktop">Find Retailer</li>
-                    <li class="cart headerLink">Cart (0)</li>
+                    <li class="objects headerLink desktop"><a href="../objects/index.html">Objects</a></li>
+                    <li class="projects headerLink desktop"><a href="../objects/index.html">Projects</a></li>
+                    <li class="about headerLink desktop"><a href="#">About</a></li>
+                    <li class="retailer headerLink desktop"><a href="#">Find Retailer</a></li>
+                    <li class="cart headerLink"><div>Cart (1)</div></li>
                     <span class="material-symbols-outlined mobile mobileMenu">
                         menu
                     </span>
@@ -527,6 +576,7 @@
                 </div>
         </div>
     </footer>
-    <script src="home.js"></script>
+    <script src="../scripts/home.js"></script>
+    <script src="../scripts/cartPopout.js"></script>
 </body>
 </html>

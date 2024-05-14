@@ -9,6 +9,7 @@
   right:0;
   margin: 0 auto;
   color:black;
+  z-index:50;
   .logoContainer{
     flex: 0 0 38%;
     img{
@@ -37,6 +38,9 @@
           display: inline-block;
           cursor:pointer;
           margin-right:4%;
+          a{
+            color:black;
+          }
 
           &::after {
             content: '';

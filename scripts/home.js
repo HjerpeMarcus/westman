@@ -1,26 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Carousel setup
     const carouselOne = document.querySelector('.carouselOne');
     const carouselTwo = document.querySelector('.carouselTwo');
     const lookingContainer = document.querySelector('.lookingContainer');
     const arrowLeft = document.querySelector('.arrowLeft');
     const arrowRight = document.querySelector('.arrowRight');
-    
+    const hero = document.querySelector('.hero');
 
+    hero.classList.add('fade-in')
+    
     function setupCarousel(carousel) {
         const originalContent = carousel.innerHTML;
-        carousel.innerHTML = originalContent + originalContent; // Duplicate content
+        carousel.innerHTML = originalContent + originalContent; 
     }
 
     setupCarousel(carouselOne);
     setupCarousel(carouselTwo);
 
     let animationFrameIdOne, animationFrameIdTwo;
-
     function scrollCarousel(carousel, speed) {
         let scrollPosition = carousel.scrollLeft;
         function scroll() {document.addEventListener("DOMContentLoaded", function() {
-            // Existing carousel setup
             const carouselOne = document.querySelector('.carouselOne');
             const carouselTwo = document.querySelector('.carouselTwo');
             const lookingContainer = document.querySelector('.lookingContainer');
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
             function setupCarousel(carousel) {
                 const originalContent = carousel.innerHTML;
-                carousel.innerHTML = originalContent + originalContent; // Duplicate content
+                carousel.innerHTML = originalContent + originalContent;
             }
         
             setupCarousel(carouselOne);
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         
             function startScrolling() {
-                const baseDuration = 150000; // Duration to complete one loop
+                const baseDuration = 150000;
                 const speedOne = (carouselOne.scrollWidth / 2) / (baseDuration / (1000 / 60));
                 const speedTwo = (carouselTwo.scrollWidth / 2) / (baseDuration / (1000 / 60));
         
@@ -87,13 +86,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             };
         
-            // News toggling setup
             const newsImages = document.querySelectorAll('.newsImage');
             const newsTexts = document.querySelectorAll('.newsText');
             const leftArrow = document.querySelector('.newsArrow.left');
             const rightArrow = document.querySelector('.newsArrow.right');
             let currentIndex = 0;
-            const totalNewsItems = newsImages.length / 2; // As news items are duplicated
+            const totalNewsItems = newsImages.length / 2; 
         
             function updateNews(direction) {
                 const oldIndex = currentIndex;
@@ -122,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
                     elements[newIndex].classList.remove(incomingDirection);
                     elements[newIndex].classList.add('active');
-                }, 500); // Match this timeout to the CSS transition duration
+                }, 500); 
             }
         
             newsImages[currentIndex].classList.add('active');
@@ -133,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
             rightArrow.addEventListener('click', () => updateNews('right'));
             leftArrow.addEventListener('click', () => updateNews('left'));
         
-            setInterval(() => updateNews('right'), 5000); // Automatically toggle news every 5 seconds
+            setInterval(() => updateNews('right'), 5000); 
         });
         
             scrollPosition += speed;
@@ -153,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function startScrolling() {
-        const baseDuration = 150000; // Duration to complete one loop
+        const baseDuration = 150000; 
         const speedOne = (carouselOne.scrollWidth / 2) / (baseDuration / (1000 / 60));
         const speedTwo = (carouselTwo.scrollWidth / 2) / (baseDuration / (1000 / 60));
 
@@ -183,13 +181,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    // News toggling setup
+
    const newsImages = document.querySelectorAll('.newsImage');
 const newsTexts = document.querySelectorAll('.newsText');
 const leftArrow = document.querySelector('.newsArrow.left');
 const rightArrow = document.querySelector('.newsArrow.right');
 let currentIndex = 0;
-const totalNewsItems = newsImages.length / 2; // As news items are duplicated
+const totalNewsItems = newsImages.length / 2;
 
 function updateNews(direction) {
     const oldIndex = currentIndex;
@@ -218,7 +216,7 @@ function updateCarousel(elements, oldIndex, newIndex, direction) {
 
         elements[newIndex].classList.remove(incomingDirection);
         elements[newIndex].classList.add('active');
-    }, 500); // Match this timeout to the CSS transition duration
+    }, 500); 
 }
 
 newsImages[currentIndex].classList.add('active');
@@ -226,7 +224,7 @@ newsImages[currentIndex].style.display = 'block';
 newsTexts[currentIndex].classList.add('active');
 newsTexts[currentIndex].style.display = 'block';
 
-let autoUpdateInterval = setInterval(() => updateNews('right'), 5000); // Automatically toggle news every 5 seconds
+let autoUpdateInterval = setInterval(() => updateNews('right'), 5000); 
 
 function resetInterval() {
     clearInterval(autoUpdateInterval);

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const lookingContainer = document.querySelector('.lookingContainer');
     const arrowLeft = document.querySelector('.arrowLeft');
     const arrowRight = document.querySelector('.arrowRight');
+    const addToCart = document.querySelector('.addToCart');
     let qNumber = 0;
     let totalImages = images.length;
     let imageWidth = images[0].clientWidth;
@@ -17,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let singleImageWidth = imageWidth + marginRight;
     let currentScrollPosition = 0;
     let scrollInterval = null;
+
+    addToCart.addEventListener('click', activateCartPopout);
 
     function recalculateDimensions() {
         imageWidth = images[0].clientWidth;

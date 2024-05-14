@@ -2,6 +2,7 @@
 @import "../partials/header";
 @import "../partials/footer";
 @import "../partials/components/arrowBtn";
+@import "../partials/cartPopout";
     .mainHeader{
         filter:invert(100);
     }
@@ -17,6 +18,13 @@
         padding:1rem;
         color:white;
         margin-bottom:2.5rem;
+        opacity: 0;
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        transform: translateY(-20px);
+        &.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
         h2{
             font-size:2.2rem;
             font-weight:500;
