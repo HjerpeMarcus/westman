@@ -422,7 +422,14 @@ a:active {
   .productView {
     display: flex;
     flex-wrap: wrap;
-    padding: 3% 3% 0 3%;
+    padding: 3% 0 0 0;
+  }
+  .productView .frameText {
+    max-width: 1220px;
+    padding: 0 10px 0 10px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 .productView .productInfo h1 {
@@ -575,7 +582,7 @@ a:active {
   display: flex;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0 -10px 3rem -10px;
+  margin: 0 0 3rem 0;
 }
 .productView .productCarousel .secondSet {
   display: flex;
@@ -593,7 +600,7 @@ a:active {
 @media (min-width: 600px) {
   .productView .productCarousel {
     width: 100vw;
-    margin: 0 -4% 3rem -4%;
+    margin: 0 0 3rem 0;
     max-width: 107%;
   }
   .productView .productCarousel .secondSet {
@@ -616,6 +623,9 @@ a:active {
   .productView .videoSection {
     display: flex;
     justify-content: space-between;
+    max-width: 1220px;
+    padding: 0 10px 0 10px;
+    margin: auto;
   }
   .productView .videoSection video {
     max-width: 40%;
@@ -672,69 +682,78 @@ a:active {
     flex: 0 0 55%;
   }
 }
-.productView .lookingContainer {
+@media (min-width: 600px) {
+  .productView .lookingTop {
+    max-width: 1220px;
+    padding: 0 10px 0 10px;
+    margin: auto;
+  }
+}
+.productView .lookingFrame {
   display: flex;
   white-space: nowrap;
   overflow: scroll;
-  margin: 0 -10px 3rem 0;
-  padding-right: 10px;
+  margin: 0 0 3rem 0;
 }
 @media (min-width: 600px) {
-  .productView .lookingContainer {
+  .productView .lookingFrame {
     flex: 0 0 100%;
     overflow-x: hidden;
+    max-width: 1220px;
+    padding: 0 10px 0 10px;
+    margin: auto;
   }
 }
-.productView .lookingContainer .lookingCard {
+.productView .lookingFrame .lookingCard {
   flex: 0 0 70%;
   margin-right: 0.75rem;
 }
 @media (min-width: 600px) {
-  .productView .lookingContainer .lookingCard {
+  .productView .lookingFrame .lookingCard {
     flex: 0 0 330px;
   }
 }
-.productView .lookingContainer .lookingCard .cardImage {
+.productView .lookingFrame .lookingCard .cardImage {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.productView .lookingContainer .lookingCard .cardImage.pink {
+.productView .lookingFrame .lookingCard .cardImage.pink {
   background-color: #FFE4E0;
 }
-.productView .lookingContainer .lookingCard .cardImage.blue {
+.productView .lookingFrame .lookingCard .cardImage.blue {
   background-color: #C5D9F6;
 }
-.productView .lookingContainer .lookingCard .cardImage.yellow {
+.productView .lookingFrame .lookingCard .cardImage.yellow {
   background-color: #FFF5DC;
 }
-.productView .lookingContainer .lookingCard .cardImage.green {
+.productView .lookingFrame .lookingCard .cardImage.green {
   background-color: #E5FCE3;
   padding-bottom: 20%;
 }
-.productView .lookingContainer .lookingCard .cardImage.red {
+.productView .lookingFrame .lookingCard .cardImage.red {
   background-color: #FBADA4;
 }
-.productView .lookingContainer .lookingCard .cardImage .imageContainer {
+.productView .lookingFrame .lookingCard .cardImage .imageContainer {
   width: 70%;
 }
-.productView .lookingContainer .lookingCard .cardImage .imageContainer img {
+.productView .lookingFrame .lookingCard .cardImage .imageContainer img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.productView .lookingContainer .lookingCard.one .cardImage {
+.productView .lookingFrame .lookingCard.one .cardImage {
   height: 400px;
 }
-.productView .lookingContainer .lookingCard.two .cardImage {
+.productView .lookingFrame .lookingCard.two .cardImage {
   height: 350px;
 }
-.productView .lookingContainer .lookingCard .cardFooter {
+.productView .lookingFrame .lookingCard .cardFooter {
   padding-top: 16px;
   background-color: white;
   font-weight: 600;
 }
-.productView .lookingContainer .lookingCard .cardFooter .cardName {
+.productView .lookingFrame .lookingCard .cardFooter .cardName {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
 }/*# sourceMappingURL=style.css.map */

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const qCounter = document.querySelector('.quantityCounter');
     const carousel = document.querySelector('.productCarousel');
     const images = document.querySelectorAll('.carouselImage');
-    const lookingContainer = document.querySelector('.lookingContainer');
+    const lookingFrame = document.querySelector('.lookingFrame');
     const arrowLeft = document.querySelector('.arrowLeft');
     const arrowRight = document.querySelector('.arrowRight');
     const addToCart = document.querySelector('.addToCart');
@@ -112,9 +112,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const margin = parseFloat(getComputedStyle(cards[0]).marginRight);
         const scrollAmount = cardWidth + margin;
         if (direction === 'right') {
-            lookingContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            lookingFrame.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         } else {
-            lookingContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            lookingFrame.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         }
     }
 
