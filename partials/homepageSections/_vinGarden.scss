@@ -1,0 +1,54 @@
+.vinGarden{
+    max-width:none;
+    padding:0;
+    @media(min-width:600px){
+        display:flex;
+        flex-direction:row-reverse;
+        justify-content:space-between;
+        max-width:1220px;
+        padding:0 10px 0 10px;
+    }
+    .wineText{
+        margin-bottom:1.5rem;
+        padding: 0 10px 0 10px;
+        h2{
+            font-size:1.5rem;
+            margin-bottom:1.5rem;
+        }
+        .wineDesc{
+            margin-bottom:1.5rem;
+        }
+        @media(min-width:600px){
+            margin:0;
+            padding:0;
+            flex: 0 0 35%;
+            h2{
+                font-size:3.75rem;
+            }
+        }
+    }
+    .wineImageContainer{
+        margin-right:auto;
+        width:69%;
+        position:relative;
+        margin-bottom:33%;
+        .innerImageContainer{
+            width:100%;
+            height:100%;
+            position:absolute;
+            right:-40%;
+            top: 40%;
+            margin-right:10px;
+        }
+        @media(min-width:600px){
+            flex: 0 0 32%;
+            margin-right:0;
+            margin-bottom:12rem;
+        }
+        img{
+            object-fit:cover;
+            width:100%;
+            height:100%;
+        }
+    }
+}

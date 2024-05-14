@@ -1,0 +1,58 @@
+.chunkyVideo{
+    max-width:none;
+    padding:0;
+    position:relative;
+    height:110vh;
+    margin-bottom:2.5rem;
+    @media(min-width:600px){
+        margin-bottom:6rem;
+    }
+    .videoText{
+        position:absolute;
+        bottom:0;
+        margin-left:10px;
+        color:white;
+        max-width:280px;
+        margin-bottom:4rem;
+        h3{
+            font-size:2.25rem;
+            margin-bottom:1.5rem;
+        }
+        .videoDesc{
+            margin-bottom:1.5rem;
+        }
+        .arrowBtn{
+            .text{
+                color:white;
+            }
+        }
+        @media(min-width:600px){
+            bottom:35vh;
+            width:100vw;
+            max-width:100%;
+            margin: auto;
+            .textContainer{
+                max-width:1220px;
+                padding: 0 10px 0 10px;
+                margin:auto;
+                h3{
+                    font-size:5rem;
+                    max-width:565px;
+                }
+                .videoDesc{
+                    max-width:565px;
+                }
+            }
+        }
+    }
+    video{
+        z-index:-2;
+        position:absolute;
+        top:0;
+        left:0;
+        height:110vh;
+        object-fit: cover;
+        width:100%;
+        object-position:55% 50%;
+    }
+}

@@ -1,0 +1,73 @@
+        .newsCarousels {
+            max-width:100%;
+            padding:0;
+            .newsCarousel {
+                display: flex;
+                position: relative;
+                width:auto;
+                max-width:none;
+                overflow: hidden; 
+                &.carouselOne {
+                    margin-bottom: 1.25rem;
+                }
+                &.carouselTwo {
+                    margin-bottom: 2.5rem;
+                }
+                .newsItem {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 1.5rem;
+                    .newsImageContainer {
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        margin-right: 0.75rem;
+                        img {
+                            object-fit: cover;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    h3 {
+                        font-size: 1.25rem;
+                        text-transform: uppercase;
+                        text-wrap: nowrap;
+                        position:relative;
+                        cursor:pointer;
+                        .strikethrough{
+                            height:4px;
+                            width:0%;
+                            background-color:black;
+                            position:absolute;
+                            top:1.8rem;
+                            left:0;
+                            transition: width ease 0.5s;
+                        }
+                        &:hover{
+                            .strikethrough{
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+            }
+            @media(min-width:600px){
+                .newsCarousel{
+                    .newsItem{
+                        .newsImageContainer{
+                            height:5rem;
+                            width:5rem;
+                            margin-right:3rem;
+                        }
+                        h3{
+                            font-size:3rem;
+                        }
+                    }
+                    &.carouselOne{
+                        margin-bottom:2.625rem;
+                    }
+                    &.carouselTwo{
+                        margin-bottom:6.8rem;
+                    }
+                }
+            }
+        }

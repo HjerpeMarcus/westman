@@ -1,0 +1,96 @@
+.latestNews{
+    position:relative;
+    margin-bottom:2.5rem;
+    .newsImageContainer, .newsTextContainer {
+        transition: transform 0.5s ease-in-out;
+    }            
+    .newsCounter{
+        &.mobile{
+            position:absolute;
+            top:6px;
+            right:10px;
+        }
+        &.desktop{
+            position:absolute;
+            top:0;
+            right:0;
+        }
+    }
+    h2{
+        font-size:1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .newsImageContainer{
+        display:flex;
+        overflow:hidden;
+        width:100%;
+        margin-bottom:1.875rem;
+        .newsImage{
+            flex: 0 0 100%;
+            margin-right:20px;
+            img{
+                width:100%;
+                object-fit:cover;
+            }
+        }
+    }
+    .newsTextContainer{
+        margin-bottom:6.25rem;
+        display:flex;
+        overflow:hidden;
+        position:relative;
+        .newsText{
+            flex:0 0 100%;
+            margin-right:20px;
+            h3{
+                font-size:1.375rem;
+                margin-bottom:1.875rem;
+            }
+        }
+    }
+    .newsArrowContainer{
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        .newsArrow{
+            flex: 0 0 33%;
+            cursor:pointer;
+            img{
+                width:100%;
+                object-fit:cover;
+            }
+        }
+    }
+    @media(min-width:600px){
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        h2{
+            font-size:3.75rem;
+            flex:0 0 100%;
+        }
+        .newsImageContainer{
+            flex:0 0 50%;
+        }
+        .newsTextContainer{
+            flex:0 0 40%;
+            max-width:400px;
+            .newsText{
+                h3{
+                    font-size:2.25rem;
+                    margin-bottom:2.5rem;
+                }
+            }
+        }
+        .newsArrowContainer{
+            position:absolute;
+            width:200px;
+            bottom:0;
+            right:0;
+            padding-right:10px;
+            .newsArrow{
+                flex: 0 0 46%;
+            }
+        }
+    }
+}

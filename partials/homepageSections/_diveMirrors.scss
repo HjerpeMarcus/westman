@@ -1,0 +1,36 @@
+.diveMirrors{
+    padding:0;
+    margin: 0 auto 2.5rem auto;
+    .mirrorText{
+        margin: 0 10px 1.5rem 10px;
+        h2{
+            font-size:1.5rem;
+            margin-bottom:1.5rem;
+        }
+    }
+    .mirrorImageContainer{
+        width:100%;
+        padding-left:10px;
+        img{
+            width:100%;
+            object-fit:cover;
+        }
+    }
+    @media(min-width:600px){
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        max-width:1220px;
+        padding: 0 10px 0 10px;
+        .mirrorText{
+            margin:0;
+            flex: 0 0 27%;
+            h2{
+                font-size:3.5rem;
+            }
+        }
+        .mirrorImageContainer{
+            flex: 0 0 60%;
+        }
+    }
+}

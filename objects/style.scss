@@ -1,7 +1,7 @@
 @import "../partials/base";
-@import "../partials/header";
-@import "../partials/footer";
-@import "../partials/cartPopout";
+@import "../partials/components/header";
+@import "../partials/components/footer";
+@import "../partials/components/cartPopout";
 
 .topSorter{
   display:flex;

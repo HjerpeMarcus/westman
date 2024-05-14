@@ -1,0 +1,99 @@
+.popularProducts{
+    .lookingTop{
+        display:flex;
+        flex: 0 0 100%;
+        justify-content:space-between;
+        align-items:center;
+        .arrows{
+            display:none;
+            cursor:pointer;
+            @media(min-width:600px){
+                display:flex;
+                padding-bottom:0.5rem;
+                .lookingArrow{
+                    &.arrowLeft{
+                        margin-right:0.5rem;
+                    }
+                    &.arrowRight{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+        .lookingAt{
+            font-size:1.5rem;
+            margin-bottom:1.5rem;
+            flex: 0 0 100%;
+            font-weight:600;
+            @media(min-width:600px){
+                flex: 0 0 55%;
+            }
+        }
+
+    }
+    .lookingContainer{
+        display:flex;
+        white-space: nowrap;
+        overflow: scroll;
+        margin: 0 -10px 3rem 0;
+        padding-right:10px;
+        @media(min-width:600px){
+            flex: 0 0 100%;
+            overflow-x: hidden;
+        }
+        .lookingCard{
+            flex: 0 0 70%;
+            margin-right:0.75rem;
+            @media(min-width:600px){
+                flex: 0 0 330px;
+            }
+            .cardImage{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                &.pink{
+                    background-color:#FFE4E0;
+                }
+                &.blue{
+                    background-color:#C5D9F6
+                }
+                &.yellow{
+                    background-color:#FFF5DC
+                }
+                &.green{
+                    background-color:#E5FCE3;
+                    padding-bottom:20%;
+                }
+                &.red{
+                    background-color:#FBADA4;
+                }
+                .imageContainer{
+                    width:70%;
+                    img{
+                        width:100%;
+                        object-fit:cover;
+                    }
+                }
+            }
+            &.one{
+                .cardImage{
+                    height:400px;
+                }
+            }
+            &.two{
+                .cardImage{
+                    height:350px;
+                }
+            }
+            .cardFooter{
+                padding-top:16px;
+                background-color:white;
+                font-weight:600;
+                .cardName{
+                    font-size:1.5rem;
+                    margin-bottom:0.75rem;
+                }
+            }
+        }
+    }
+}
