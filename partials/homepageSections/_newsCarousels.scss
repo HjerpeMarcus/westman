@@ -16,11 +16,11 @@
                 .newsItem {
                     display: flex;
                     align-items: center;
-                    margin-right: 1.5rem;
+                    margin-right: 2.5rem;
                     .newsImageContainer {
                         height: 2.5rem;
                         width: 2.5rem;
-                        margin-right: 0.75rem;
+                        margin-right: 0.5rem;
                         img {
                             object-fit: cover;
                             height: 100%;
@@ -32,7 +32,10 @@
                         text-transform: uppercase;
                         text-wrap: nowrap;
                         position:relative;
-                        cursor:pointer;
+                        ;
+                        a{
+                            color:black;
+                        }
                         .strikethrough{
                             height:4px;
                             width:0%;
@@ -53,13 +56,17 @@
             @media(min-width:600px){
                 .newsCarousel{
                     .newsItem{
+                        margin-right:4rem;
                         .newsImageContainer{
                             height:5rem;
                             width:5rem;
-                            margin-right:3rem;
+                            margin-right:0.75rem;
                         }
                         h3{
                             font-size:3rem;
+                            a{
+                                color:black;
+                            }
                         }
                     }
                     &.carouselOne{

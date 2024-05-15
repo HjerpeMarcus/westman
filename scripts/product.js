@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 purple: "Purple",
                 brown: "Brown"
             };
-            chosenColorText.innerHTML = `Color: ${textMap[this.classList[1]]}`;
+            chosenColorText.innerHTML = `${textMap[this.classList[1]]}`;
             spline.forEach(iframe => {
                 iframe.src = colorMap[this.classList[1]];
             });

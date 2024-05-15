@@ -3,6 +3,7 @@
 @import "../partials/components/footer";
 @import "../partials/components/arrowBtn";
 @import "../partials/components/cartPopout";
+@import "../partials/components/sideMenu";
 @import "../partials/homepageSections/getInspiration";
 @import "../partials/homepageSections/newsCarousels";
 @import "../partials/homepageSections/specialProjects";
@@ -17,7 +18,7 @@
     }
 .section-hidden {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 .section-visible {
@@ -53,7 +54,7 @@
         }
         .seeMore{
             display:flex;
-            cursor:pointer;
+            ;
             p{
                 margin-right:2.25rem;
             }

@@ -90,6 +90,18 @@
             padding-right:10px;
             .newsArrow{
                 flex: 0 0 46%;
+                transition: transform ease 0.3s;
+                cursor:pointer;
+                &.left{
+                    &:hover{
+                        transform: translateX(-1rem);
+                    }
+                }
+                &.right{
+                    &:hover{
+                        transform: translateX(1rem);
+                    }
+                }
             }
         }
     }

@@ -245,6 +245,9 @@ a:active {
   height: 100vh;
   width: 100vw;
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: white;
   position: fixed;
   top: 0;
@@ -310,12 +313,8 @@ a:active {
 .cartPopout .itemRow .itemText .bottomRow .cartQuantity .number {
   margin: 0 1rem 0 1rem;
 }
-.cartPopout .itemRow .itemText .bottomRow .cartQuantity .cartQuantBtn {
-  cursor: pointer;
-}
 .cartPopout .itemRow .itemText .bottomRow .cartRemove {
   text-decoration: underline;
-  cursor: pointer;
 }
 .cartPopout .cartFooter {
   padding: 1.5rem 0 1.5rem 0;
@@ -330,6 +329,7 @@ a:active {
   text-transform: uppercase;
 }
 .cartPopout .cartFooter .footerRow .shippingAddress {
+  margin-left: 0.5rem;
   font-size: 0.875rem;
 }
 .cartPopout .cartFooter .footerRow.total {
@@ -378,7 +378,54 @@ a:active {
 .cartPopout .closeRow .closeBtn {
   display: inline-block;
   margin-left: auto;
-  cursor: pointer;
+}
+
+.sideMenu {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: -150vw;
+  z-index: 100;
+  padding: 1.5rem 1rem 1rem 1rem;
+  transition: right ease 0.5s;
+  flex-wrap: wrap;
+}
+@media (min-width: 600px) {
+  .sideMenu {
+    max-width: 360px;
+  }
+}
+.sideMenu.active {
+  right: 0;
+}
+.sideMenu .closeRow {
+  flex: 0 0 100%;
+  display: flex;
+  margin-bottom: 4rem;
+  align-self: flex-start;
+}
+.sideMenu .closeRow .menuClose {
+  display: inline-block;
+  margin-left: auto;
+}
+.sideMenu .linkContainer {
+  margin-bottom: 1.5rem;
+}
+.sideMenu .linkContainer .sideMenuLink {
+  color: black;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.sideMenu .socialMedia {
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+.sideMenu .socialMedia a {
+  color: black;
 }
 
 .frame {
@@ -444,8 +491,10 @@ a:active {
   margin-bottom: 1rem;
 }
 .productView .productInfo .subHeader {
-  font-weight: 500;
   margin-bottom: 0.75rem;
+}
+.productView .productInfo .subHeader .chosenColor {
+  font-weight: 500;
 }
 .productView .productInfo .colorContainer {
   width: 75vw;
@@ -502,7 +551,6 @@ a:active {
 }
 .productView .productInfo .quantityContainer .quantityButton {
   font-size: 2rem;
-  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -519,7 +567,6 @@ a:active {
   background-color: white;
   color: black;
   text-decoration: none;
-  cursor: pointer;
 }
 .productView .productInfo .addToCart:hover .invertField {
   height: 100%;

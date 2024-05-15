@@ -1,0 +1,46 @@
+.sideMenu{
+    height:100vh;
+    width:100vw;
+    max-width:100%;
+    background-color:white;
+    position:fixed;
+    top:0;
+    right:-150vw;
+    z-index:100;
+    padding:1.5rem 1rem 1rem 1rem;
+    transition: right ease 0.5s;
+    flex-wrap:wrap;
+    @media(min-width:600px){
+        max-width:360px;
+    }
+    &.active{
+        right:0;
+    }
+    .closeRow{
+        flex: 0 0 100%;
+        display:flex;
+        margin-bottom:4rem;
+        align-self:flex-start;
+        .menuClose{
+            display:inline-block;
+            margin-left:auto;
+            ;
+        }
+    }
+    .linkContainer{
+        margin-bottom:1.5rem;
+        .sideMenuLink{
+            color:black;
+            font-size:1.75rem;
+            text-transform:uppercase;
+            font-weight:500;
+        }
+    }
+    .socialMedia{
+        padding-top:1rem;
+        text-transform:uppercase;
+        a{
+            color:black;
+        }
+    }
+}

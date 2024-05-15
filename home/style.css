@@ -268,6 +268,9 @@ a:active {
   height: 100vh;
   width: 100vw;
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: white;
   position: fixed;
   top: 0;
@@ -333,12 +336,8 @@ a:active {
 .cartPopout .itemRow .itemText .bottomRow .cartQuantity .number {
   margin: 0 1rem 0 1rem;
 }
-.cartPopout .itemRow .itemText .bottomRow .cartQuantity .cartQuantBtn {
-  cursor: pointer;
-}
 .cartPopout .itemRow .itemText .bottomRow .cartRemove {
   text-decoration: underline;
-  cursor: pointer;
 }
 .cartPopout .cartFooter {
   padding: 1.5rem 0 1.5rem 0;
@@ -353,6 +352,7 @@ a:active {
   text-transform: uppercase;
 }
 .cartPopout .cartFooter .footerRow .shippingAddress {
+  margin-left: 0.5rem;
   font-size: 0.875rem;
 }
 .cartPopout .cartFooter .footerRow.total {
@@ -401,7 +401,54 @@ a:active {
 .cartPopout .closeRow .closeBtn {
   display: inline-block;
   margin-left: auto;
-  cursor: pointer;
+}
+
+.sideMenu {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: -150vw;
+  z-index: 100;
+  padding: 1.5rem 1rem 1rem 1rem;
+  transition: right ease 0.5s;
+  flex-wrap: wrap;
+}
+@media (min-width: 600px) {
+  .sideMenu {
+    max-width: 360px;
+  }
+}
+.sideMenu.active {
+  right: 0;
+}
+.sideMenu .closeRow {
+  flex: 0 0 100%;
+  display: flex;
+  margin-bottom: 4rem;
+  align-self: flex-start;
+}
+.sideMenu .closeRow .menuClose {
+  display: inline-block;
+  margin-left: auto;
+}
+.sideMenu .linkContainer {
+  margin-bottom: 1.5rem;
+}
+.sideMenu .linkContainer .sideMenuLink {
+  color: black;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.sideMenu .socialMedia {
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+.sideMenu .socialMedia a {
+  color: black;
 }
 
 .getInspiration {
@@ -514,12 +561,12 @@ a:active {
 .newsCarousels .newsCarousel .newsItem {
   display: flex;
   align-items: center;
-  margin-right: 1.5rem;
+  margin-right: 2.5rem;
 }
 .newsCarousels .newsCarousel .newsItem .newsImageContainer {
   height: 2.5rem;
   width: 2.5rem;
-  margin-right: 0.75rem;
+  margin-right: 0.5rem;
 }
 .newsCarousels .newsCarousel .newsItem .newsImageContainer img {
   -o-object-fit: cover;
@@ -532,7 +579,9 @@ a:active {
   text-transform: uppercase;
   text-wrap: nowrap;
   position: relative;
-  cursor: pointer;
+}
+.newsCarousels .newsCarousel .newsItem h3 a {
+  color: black;
 }
 .newsCarousels .newsCarousel .newsItem h3 .strikethrough {
   height: 4px;
@@ -547,13 +596,19 @@ a:active {
   width: 100%;
 }
 @media (min-width: 600px) {
+  .newsCarousels .newsCarousel .newsItem {
+    margin-right: 4rem;
+  }
   .newsCarousels .newsCarousel .newsItem .newsImageContainer {
     height: 5rem;
     width: 5rem;
-    margin-right: 3rem;
+    margin-right: 0.75rem;
   }
   .newsCarousels .newsCarousel .newsItem h3 {
     font-size: 3rem;
+  }
+  .newsCarousels .newsCarousel .newsItem h3 a {
+    color: black;
   }
   .newsCarousels .newsCarousel.carouselOne {
     margin-bottom: 2.625rem;
@@ -854,6 +909,9 @@ a:active {
 .chunkyVideo .videoText .videoDesc {
   margin-bottom: 1.5rem;
 }
+.chunkyVideo .videoText .arrowBtn {
+  cursor: default;
+}
 .chunkyVideo .videoText .arrowBtn .text {
   color: white;
 }
@@ -1086,6 +1144,14 @@ a:active {
   }
   .latestNews .newsArrowContainer .newsArrow {
     flex: 0 0 46%;
+    transition: transform ease 0.3s;
+    cursor: pointer;
+  }
+  .latestNews .newsArrowContainer .newsArrow.left:hover {
+    transform: translateX(-1rem);
+  }
+  .latestNews .newsArrowContainer .newsArrow.right:hover {
+    transform: translateX(1rem);
   }
 }
 
@@ -1095,7 +1161,7 @@ a:active {
 
 .section-hidden {
   opacity: 0;
-  transform: translateY(-50px);
+  transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
@@ -1134,7 +1200,6 @@ a:active {
 }
 .hero .seeMore {
   display: flex;
-  cursor: pointer;
 }
 .hero .seeMore p {
   margin-right: 2.25rem;

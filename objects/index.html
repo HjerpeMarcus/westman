@@ -11,56 +11,71 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="shadow"></div>
-    <div class="cartPopout">
+    <div class="sideMenu">
         <div class="closeRow">
-            <span class="material-symbols-outlined closeBtn">
+            <span class="material-symbols-outlined menuClose">
                 close
                 </span>
         </div>
-        <p class="cartHeader">
-            Cart (1)
-        </p>
-            <div class="itemRow">
-                <div class="imgContainer">
-                    <img src="../img/chunkyCup_pink.png">
-                </div>
-                <div class="itemText">
-                    <span class="boldText name">Chunky Cup</span>
-                    <span class="boldText price">€65</span>
-                    <span class="color">Pink</span>
-                    <div class="bottomRow">
-                        <div class="cartQuantity">
-                            <span class="cartQuantBtn material-symbols-outlined">
-                                remove
-                                </span>
-                            <span class="number">1</span>
-                            <span class="cartQuantBtn material-symbols-outlined">
-                                add
-                                </span>
+        <div class="linkContainer"><a class="sideMenuLink" href="../objects/index.html">Objects</a></div>
+        <div class="linkContainer"><a class="sideMenuLink" href="../objects/index.html">Projects</a></div>
+        <div class="linkContainer"><a class="sideMenuLink" href="../objects/index.html">About</a></div>
+        <div class="linkContainer"><a class="sideMenuLink" href="../objects/index.html">Find Retailer</a></div>
+        <div class="socialMedia"><a href="#">Instagram</a></div>
+        <div class="socialMedia"><a href="#">TikTok</a></div>
+    </div>
+    <div class="shadow"></div>
+    <div class="cartPopout">
+        <div>
+            <div class="closeRow">
+                <span class="material-symbols-outlined closeBtn">
+                    close
+                    </span>
+            </div>
+            <p class="cartHeader">
+                Cart (1)
+            </p>
+                <div class="itemRow">
+                    <div class="imgContainer">
+                        <img src="../img/chunkyCup_pink.png">
+                    </div>
+                    <div class="itemText">
+                        <span class="boldText name">Chunky Cup</span>
+                        <span class="boldText price">€65</span>
+                        <span class="color">Pink</span>
+                        <div class="bottomRow">
+                            <div class="cartQuantity">
+                                <span class="cartQuantBtn material-symbols-outlined">
+                                    remove
+                                    </span>
+                                <span class="number">1</span>
+                                <span class="cartQuantBtn material-symbols-outlined">
+                                    add
+                                    </span>
+                            </div>
+                        <div class="cartRemove"><span>REMOVE</span></div>
                         </div>
-                    <div class="cartRemove"><span>REMOVE</span></div>
                     </div>
                 </div>
             </div>
-        <div class="cartFooter">
-            <div class="footerRow subtotal">
-                <span class="footerTitle">Subtotal</span>
-                <span class="footerPrice">€65</span>
+            <div class="cartFooter">
+                <div class="footerRow subtotal">
+                    <span class="footerTitle">Subtotal</span>
+                    <span class="footerPrice">€65</span>
+                </div>
+                <div class="footerRow shipping">
+                    <span class="footerTitle">Shipping</span><span class="shippingAddress">(Värmlands län, Sweden)</span>
+                    <span class="footerPrice">€15</span>
+                </div>
+                <div class="footerRow total">
+                    <span class="footerTitle">Total</span>
+                    <span class="footerPrice">€80</span>
+                </div>
+                <a class="cartButton" href="../checkout/index.html">To Checkout
+                    <div class="invertField"></div>
+                </a>
             </div>
-            <div class="footerRow shipping">
-                <span class="footerTitle">Shipping</span><span class="shippingAddress">(Värmlands län, Sweden)</span>
-                <span class="footerPrice">€15</span>
-            </div>
-            <div class="footerRow total">
-                <span class="footerTitle">Total</span>
-                <span class="footerPrice">€80</span>
-            </div>
-            <a class="cartButton" href="../checkout/index.html">To Checkout
-                <div class="invertField"></div>
-            </a>
         </div>
-    </div>
     <header class="mainHeader">
         <a href="../home/index.html" class="logoContainer">
             <img src="../img/logga.svg">

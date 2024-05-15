@@ -20,7 +20,7 @@
         align-items:center;
         font-size:1rem;
         color:black;
-        cursor:pointer;
+        ;
         position:relative;
         margin-right:auto;
         span{
@@ -317,7 +317,7 @@
             font-family: "Space Grotesk", sans-serif;
             text-transform:uppercase;
             position:relative;
-            cursor:pointer;
+            ;
             &:hover{
                 .invertField{
                     height:100%;
