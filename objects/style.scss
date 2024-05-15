@@ -132,7 +132,6 @@
       display:flex;
       align-items:center;
       position:relative;
-      ;
       .title{
         text-transform:uppercase;
         font-weight:500;
@@ -182,7 +181,7 @@
               margin-bottom:4%;
               aspect-ratio: 1 / 1;
               position:relative;
-              ;
+              cursor:pointer;
               display:flex;
               align-items:center;
               justify-content:center;
@@ -276,7 +275,7 @@
               }
             }
             &:hover{
-              ;
+              cursor:pointer;
             }
           }
           @media(min-width:600px){
