@@ -11,11 +11,18 @@
                 display:flex;
                 padding-bottom:0.5rem;
                 .lookingArrow{
+                    transition: transform 0.3s ease;
                     &.arrowLeft{
                         margin-right:0.5rem;
+                            &:hover{
+                                transform: translateX(-1rem);
+                            }
                     }
                     &.arrowRight{
                         transform: rotate(180deg);
+                        &:hover{
+                            transform: rotate(180deg) translateX(-1rem);
+                        }
                     }
                 }
             }

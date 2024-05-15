@@ -797,11 +797,20 @@ a:active {
     display: flex;
     padding-bottom: 0.5rem;
   }
+  .popularProducts .lookingTop .arrows .lookingArrow {
+    transition: transform 0.3s ease;
+  }
   .popularProducts .lookingTop .arrows .lookingArrow.arrowLeft {
     margin-right: 0.5rem;
   }
+  .popularProducts .lookingTop .arrows .lookingArrow.arrowLeft:hover {
+    transform: translateX(-1rem);
+  }
   .popularProducts .lookingTop .arrows .lookingArrow.arrowRight {
     transform: rotate(180deg);
+  }
+  .popularProducts .lookingTop .arrows .lookingArrow.arrowRight:hover {
+    transform: rotate(180deg) translateX(-1rem);
   }
 }
 .popularProducts .lookingTop .lookingAt {
