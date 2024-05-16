@@ -17,18 +17,37 @@ a:active {
   text-decoration: none;
 }
 
+.headerContainer {
+  background-color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease, background-color 0.3s ease;
+}
+.headerContainer.scroll-down {
+  transform: translateY(-100%);
+}
+.headerContainer.scroll-up {
+  transform: translateY(0);
+}
+.headerContainer.invert {
+  filter: invert(100);
+  background-color: rgba(255, 255, 255, 0);
+}
+
 .mainHeader {
   display: flex;
-  padding: 0.75rem 10px 0.75rem 10px;
+  padding: 0 10px 0 10px;
+  margin: auto;
   justify-content: space-between;
   width: 100%;
   max-width: 1220px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  color: black;
-  z-index: 50;
 }
 .mainHeader .logoContainer {
   flex: 0 0 38%;
@@ -45,6 +64,7 @@ a:active {
   display: flex;
   flex: 0 0 62%;
   justify-content: flex-end;
+  align-items: center;
 }
 .mainHeader .headerRight nav {
   display: flex;
@@ -69,7 +89,7 @@ a:active {
 .mainHeader .headerRight nav ul .headerLink::after {
   content: "";
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 0.65rem;
   left: 0;
   width: 0%;
   height: 2px;
@@ -111,11 +131,6 @@ a:active {
     text-transform: uppercase;
     font-weight: 400;
     max-width: none;
-  }
-}
-@media (min-width: 600px) {
-  .mainHeader {
-    margin-bottom: 2.5rem;
   }
 }
 
@@ -401,6 +416,7 @@ a:active {
 .cartPopout .closeRow .closeBtn {
   display: inline-block;
   margin-left: auto;
+  cursor: pointer;
 }
 
 .sideMenu {
@@ -433,6 +449,7 @@ a:active {
 .sideMenu .closeRow .menuClose {
   display: inline-block;
   margin-left: auto;
+  cursor: pointer;
 }
 .sideMenu .linkContainer {
   margin-bottom: 1.5rem;
@@ -830,6 +847,11 @@ a:active {
   overflow: scroll;
   margin: 0 -10px 3rem 0;
   padding-right: 10px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.popularProducts .lookingContainer::-webkit-scrollbar {
+  display: none;
 }
 @media (min-width: 600px) {
   .popularProducts .lookingContainer {
@@ -879,7 +901,7 @@ a:active {
   height: 400px;
 }
 .popularProducts .lookingContainer .lookingCard.two .cardImage {
-  height: 350px;
+  height: 320px;
 }
 .popularProducts .lookingContainer .lookingCard .cardFooter {
   padding-top: 16px;
@@ -1164,10 +1186,6 @@ a:active {
   }
 }
 
-.mainHeader {
-  filter: invert(100);
-}
-
 .section-hidden {
   opacity: 0;
   transform: translateY(50px);
@@ -1183,7 +1201,7 @@ a:active {
   height: 100vh;
   width: 100vw;
   max-width: 100%;
-  background-image: url("../img/homeHeroMobile.png");
+  background-image: url("../img/homeHeroMobile.webp");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -1215,7 +1233,7 @@ a:active {
 }
 @media (min-width: 600px) {
   .hero {
-    background-image: url("../img/homeHeroDesktop.png");
+    background-image: url("../img/homeHeroDesktop.webp");
     margin-bottom: 2.5rem;
     padding: 0;
   }

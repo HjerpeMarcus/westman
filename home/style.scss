@@ -13,9 +13,6 @@
 @import "../partials/homepageSections/vinGarden";
 @import "../partials/homepageSections/diveMirrors";
 @import "../partials/homepageSections/latestNews";
-    .mainHeader{
-        filter:invert(100);
-    }
 .section-hidden {
     opacity: 0;
     transform: translateY(50px);
@@ -29,7 +26,7 @@
         height:100vh;
         width:100vw;
         max-width:100%;
-        background-image: url("../img/homeHeroMobile.png");
+        background-image: url("../img/homeHeroMobile.webp");
         background-size:cover;
         display:flex;
         flex-direction:column;
@@ -60,7 +57,7 @@
             }
         }
         @media(min-width:600px){
-            background-image: url("../img/homeHeroDesktop.png");
+            background-image: url("../img/homeHeroDesktop.webp");
             margin-bottom:2.5rem;
             padding:0;
             .heroText{

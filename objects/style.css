@@ -17,18 +17,37 @@ a:active {
   text-decoration: none;
 }
 
+.headerContainer {
+  background-color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease, background-color 0.3s ease;
+}
+.headerContainer.scroll-down {
+  transform: translateY(-100%);
+}
+.headerContainer.scroll-up {
+  transform: translateY(0);
+}
+.headerContainer.invert {
+  filter: invert(100);
+  background-color: rgba(255, 255, 255, 0);
+}
+
 .mainHeader {
   display: flex;
-  padding: 0.75rem 10px 0.75rem 10px;
+  padding: 0 10px 0 10px;
+  margin: auto;
   justify-content: space-between;
   width: 100%;
   max-width: 1220px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  color: black;
-  z-index: 50;
 }
 .mainHeader .logoContainer {
   flex: 0 0 38%;
@@ -45,6 +64,7 @@ a:active {
   display: flex;
   flex: 0 0 62%;
   justify-content: flex-end;
+  align-items: center;
 }
 .mainHeader .headerRight nav {
   display: flex;
@@ -69,7 +89,7 @@ a:active {
 .mainHeader .headerRight nav ul .headerLink::after {
   content: "";
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 0.65rem;
   left: 0;
   width: 0%;
   height: 2px;
@@ -111,11 +131,6 @@ a:active {
     text-transform: uppercase;
     font-weight: 400;
     max-width: none;
-  }
-}
-@media (min-width: 600px) {
-  .mainHeader {
-    margin-bottom: 2.5rem;
   }
 }
 
@@ -378,6 +393,7 @@ a:active {
 .cartPopout .closeRow .closeBtn {
   display: inline-block;
   margin-left: auto;
+  cursor: pointer;
 }
 
 .sideMenu {
@@ -410,6 +426,7 @@ a:active {
 .sideMenu .closeRow .menuClose {
   display: inline-block;
   margin-left: auto;
+  cursor: pointer;
 }
 .sideMenu .linkContainer {
   margin-bottom: 1.5rem;
@@ -433,7 +450,7 @@ a:active {
   flex-direction: column-reverse;
 }
 .topSorter .topText {
-  padding: 5rem 10px 2.5rem 10px;
+  padding: 3rem 10px 2.5rem 10px;
 }
 .topSorter .topText h1 {
   font-size: 2rem;
@@ -451,6 +468,7 @@ a:active {
     padding-left: 0;
     padding-right: 0;
     margin: auto;
+    padding-top: 5rem;
   }
   .topSorter .topText h1 {
     font-size: 3.5rem;
@@ -464,7 +482,6 @@ a:active {
 .topSorter .banner {
   width: 100vw;
   max-width: 100%;
-  margin: 4rem 0 2rem 0;
 }
 .topSorter .banner img {
   -o-object-fit: cover;
@@ -547,6 +564,13 @@ a:active {
   font-weight: 500;
   text-transform: uppercase;
   font-family: "Space Grotesk", sans-serif;
+  cursor: pointer;
+}
+.filteringToolsContainer .searchBar #search::-moz-placeholder {
+  color: black;
+}
+.filteringToolsContainer .searchBar #search::placeholder {
+  color: black;
 }
 @media (min-width: 600px) {
   .filteringToolsContainer .searchBar #search {
@@ -574,6 +598,7 @@ a:active {
   font-weight: 500;
   font-size: 1.5rem;
   vertical-align: middle;
+  cursor: pointer;
 }
 .filteringToolsContainer .filterToolsTwo .filterTool .filterBox {
   padding: 10px;
@@ -787,9 +812,14 @@ a:active {
 .gradientWrapper .categoryContainer {
   display: flex;
   overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   white-space: nowrap;
   padding: 0 10px;
   margin: 0 0 30px 0;
+}
+.gradientWrapper .categoryContainer::-webkit-scrollbar {
+  display: none;
 }
 .gradientWrapper .categoryContainer::before, .gradientWrapper .categoryContainer::after {
   content: "";
@@ -824,6 +854,7 @@ a:active {
   font-size: 2.5rem;
   margin-right: 2rem;
   position: relative;
+  cursor: pointer;
   color: #4B4B4B;
 }
 .gradientWrapper .categoryContainer .category:hover {

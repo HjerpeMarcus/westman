@@ -17,18 +17,37 @@ a:active {
   text-decoration: none;
 }
 
+.headerContainer {
+  background-color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease, background-color 0.3s ease;
+}
+.headerContainer.scroll-down {
+  transform: translateY(-100%);
+}
+.headerContainer.scroll-up {
+  transform: translateY(0);
+}
+.headerContainer.invert {
+  filter: invert(100);
+  background-color: rgba(255, 255, 255, 0);
+}
+
 .mainHeader {
   display: flex;
-  padding: 0.75rem 10px 0.75rem 10px;
+  padding: 0 10px 0 10px;
+  margin: auto;
   justify-content: space-between;
   width: 100%;
   max-width: 1220px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  color: black;
-  z-index: 50;
 }
 .mainHeader .logoContainer {
   flex: 0 0 38%;
@@ -45,6 +64,7 @@ a:active {
   display: flex;
   flex: 0 0 62%;
   justify-content: flex-end;
+  align-items: center;
 }
 .mainHeader .headerRight nav {
   display: flex;
@@ -69,7 +89,7 @@ a:active {
 .mainHeader .headerRight nav ul .headerLink::after {
   content: "";
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 0.65rem;
   left: 0;
   width: 0%;
   height: 2px;
@@ -111,11 +131,6 @@ a:active {
     text-transform: uppercase;
     font-weight: 400;
     max-width: none;
-  }
-}
-@media (min-width: 600px) {
-  .mainHeader {
-    margin-bottom: 2.5rem;
   }
 }
 
@@ -378,6 +393,7 @@ a:active {
 .cartPopout .closeRow .closeBtn {
   display: inline-block;
   margin-left: auto;
+  cursor: pointer;
 }
 
 .sideMenu {
@@ -410,6 +426,7 @@ a:active {
 .sideMenu .closeRow .menuClose {
   display: inline-block;
   margin-left: auto;
+  cursor: pointer;
 }
 .sideMenu .linkContainer {
   margin-bottom: 1.5rem;
@@ -469,7 +486,7 @@ a:active {
   .productView {
     display: flex;
     flex-wrap: wrap;
-    padding: 3% 0 0 0;
+    padding: 4rem 0 0 0;
   }
   .productView .frameText {
     max-width: 1220px;
@@ -656,7 +673,7 @@ a:active {
   .productView .productCarousel .carouselImage {
     flex: 0 0 34vw;
     margin-right: 0;
-    max-height: 676px;
+    max-height: 530px;
   }
 }
 .productView .videoSection video {
@@ -749,6 +766,11 @@ a:active {
     max-width: 1220px;
     padding: 0 10px 0 10px;
     margin: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .productView .lookingFrame::-webkit-scrollbar {
+    display: none;
   }
 }
 .productView .lookingFrame .lookingCard {
@@ -793,12 +815,12 @@ a:active {
   height: 400px;
 }
 .productView .lookingFrame .lookingCard.two .cardImage {
-  height: 350px;
+  height: 320px;
 }
 .productView .lookingFrame .lookingCard .cardFooter {
   padding-top: 16px;
   background-color: white;
-  font-weight: 600;
+  font-weight: 500;
 }
 .productView .lookingFrame .lookingCard .cardFooter .cardName {
   font-size: 1.5rem;
